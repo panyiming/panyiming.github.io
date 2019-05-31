@@ -14,7 +14,7 @@
   <entry>
     <title><![CDATA[Learning Plan]]></title>
     <url>%2F2019%2F05%2F31%2Flearning-plan%2F</url>
-    <content type="text"><![CDATA[In my blog, i am planning to write something about the following topics: Programming skillsIt will include data structure and algorithum. Besides, there will be some notes abouts python and c++. Machine learningThese will be about general traditional machine learning algorithums except deep learning, for example xgboost. Deep learningThere will be some notes about deep learning, network structure, tricks of training models, general theory about deep learning. Face recognitionI want to write some notes abouts face recognition, which will be about the whole pileline of building a face recognition system. Image processBasic knowledge about image process]]></content>
+    <content type="text"><![CDATA[In my blog, i am planning to write something about the following topics: Programming skillsIt will include data structure and algorithum. Besides, there will be some notes about python and c++. Machine learningThese will be about general traditional machine learning algorithums except deep learning, for example xgboost. Deep learningThere will be some notes about deep learning, network structure, tricks of training models, general theory about deep learning. Face recognitionI want to write some notes abouts face recognition, which will be about the whole pileline of building a face recognition system. Image processBasic knowledge about image process]]></content>
       <categories>
         <category>general notes</category>
       </categories>
