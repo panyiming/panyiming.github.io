@@ -186,7 +186,7 @@ th {
 body {
   position: relative;
   font-family: 'Fjalla One', "PingFang SC", "Microsoft YaHei", sans-serif;
-  font-size: 14px;
+  font-size: 15px;
   line-height: 2;
   color: #555;
   background: #fff;
@@ -203,7 +203,7 @@ body {
 }
 @media (min-width: 1600px) {
   body {
-    font-size: 16px;
+    font-size: 17px;
   }
 }
 h1,
@@ -400,11 +400,11 @@ kbd {
 }
 table {
   margin: 20px 0;
-  width: 100%;
+  width: 120%;
   border-collapse: collapse;
   border-spacing: 0;
   border: 1px solid #ddd;
-  font-size: 14px;
+  font-size: 18px;
   table-layout: fixed;
   word-wrap: break-all;
 }
@@ -444,24 +444,24 @@ body {
 }
 .header-inner {
   margin: 0 auto;
-  padding: 100px 0 70px;
-  width: 800px;
+  padding: 0px 0 0px;
+  width: 950px;
 }
 @media (min-width: 1600px) {
   .container .header-inner {
-    width: 950px;
+    width: 1000px;
   }
 }
 .main {
-  padding-bottom: 150px;
+  padding-bottom: 130px;
 }
 .main-inner {
   margin: 0 auto;
-  width: 800px;
+  width: 950px;
 }
 @media (min-width: 1600px) {
   .container .main-inner {
-    width: 950px;
+    width: 1000px;
   }
 }
 .footer {
@@ -469,16 +469,16 @@ body {
   left: 0;
   bottom: 0;
   width: 100%;
-  min-height: 50px;
+  min-height: 120px;
 }
 .footer-inner {
   box-sizing: border-box;
   margin: 20px auto;
-  width: 800px;
+  width: 950px;
 }
 @media (min-width: 1600px) {
   .container .footer-inner {
-    width: 950px;
+    width: 1000px;
   }
 }
 pre,
@@ -1129,7 +1129,7 @@ pre .javascript .function {
   display: inline-block;
   vertical-align: top;
   line-height: 36px;
-  font-size: 20px;
+  font-size: 15px;
   font-weight: normal;
   font-family: 'Fjalla One', 'Fjalla One', "PingFang SC", "Microsoft YaHei", sans-serif;
 }
@@ -1219,7 +1219,7 @@ pre .javascript .function {
   opacity: 0;
 }
 .post-body {
-  font-family: 'Noto Serif JP', 'Fjalla One', "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: 'Noto Serif SC', 'Fjalla One', "PingFang SC", "Microsoft YaHei", sans-serif;
 }
 @media (max-width: 767px) {
   .post-body {
@@ -1237,7 +1237,7 @@ pre .javascript .function {
 .post-body .figure .caption {
   margin: -20px auto 15px;
   text-align: center;
-  font-size: 14px;
+  font-size: 15px;
   color: #999;
   font-weight: bold;
   line-height: 1;
@@ -1497,7 +1497,7 @@ pre .javascript .function {
 .posts-expand .post-meta {
   margin: 3px 0 60px 0;
   color: #999;
-  font-family: 'Noto Serif JP', 'Fjalla One', "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: 'Noto Serif SC', 'Fjalla One', "PingFang SC", "Microsoft YaHei", sans-serif;
   font-size: 12px;
   text-align: center;
 }
@@ -1758,7 +1758,7 @@ pre .javascript .function {
 .site-description {
   margin-top: 5px;
   text-align: center;
-  font-size: 14px;
+  font-size: 10px;
   color: #999;
 }
 .site-state {
@@ -1783,10 +1783,10 @@ pre .javascript .function {
   text-align: center;
   color: inherit;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 10px;
 }
 .site-state-item-name {
-  font-size: 13px;
+  font-size: 10px;
   color: inherit;
 }
 .feed-link {
@@ -1829,7 +1829,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #66f;
+  background: #faffde;
 }
 .links-of-blogroll {
   font-size: 13px;
