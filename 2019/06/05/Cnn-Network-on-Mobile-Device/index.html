@@ -131,14 +131,14 @@
 <meta property="og:site_name" content="PYM">
 <meta property="og:description" content="1 Depthwise Separable Convolutions1.1 Normal Convolution:Every chanel of the input  will be connected to the per channel of the output. If the input size is h1*w1*c1, the filters size is $hwc1$, the o">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="https://cnn-network-on-mobile-device/standard_conv.png">
+<meta property="og:image" content="https://panyiming.github.io/2019/06/05/Cnn-Network-on-Mobile-Device/standard_conv.png">
 <meta property="og:image" content="https://panyiming.github.io/2019/06/05/Cnn-Network-on-Mobile-Device/group_conv.png">
 <meta property="og:image" content="https://panyiming.github.io/2019/06/05/Cnn-Network-on-Mobile-Device/seperable_conv.png">
-<meta property="og:updated_time" content="2019-06-17T14:07:21.043Z">
+<meta property="og:updated_time" content="2019-06-17T14:14:52.463Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Cnn Network On Mobile Device">
 <meta name="twitter:description" content="1 Depthwise Separable Convolutions1.1 Normal Convolution:Every chanel of the input  will be connected to the per channel of the output. If the input size is h1*w1*c1, the filters size is $hwc1$, the o">
-<meta name="twitter:image" content="https://cnn-network-on-mobile-device/standard_conv.png">
+<meta name="twitter:image" content="https://panyiming.github.io/2019/06/05/Cnn-Network-on-Mobile-Device/standard_conv.png">
 
 
 
@@ -391,7 +391,7 @@
 
       
         <h1 id="1-Depthwise-Separable-Convolutions"><a href="#1-Depthwise-Separable-Convolutions" class="headerlink" title="1 Depthwise Separable Convolutions"></a>1 Depthwise Separable Convolutions</h1><h2 id="1-1-Normal-Convolution"><a href="#1-1-Normal-Convolution" class="headerlink" title="1.1 Normal Convolution:"></a>1.1 Normal Convolution:</h2><p>Every chanel of the input  will be connected to the per channel of the output. If the input size is <script type="math/tex">h1*w1*c1</script>, the filters size is $h<em>w</em>c1$, the output size is <script type="math/tex">h2*w2*c2</script>, the parameter count will be:</p>
-<script type="math/tex; mode=display">h*w*c1*c2</script><p>The example is as follows:<br><img src="//Cnn-Network-on-Mobile-Device/standard_conv.png" alt><br>input size is <script type="math/tex">4*4*4</script> and the filters size is <script type="math/tex">2*2*4</script>, (padding=0, stride=1), output size is <script type="math/tex">3*3*4</script>, so the parameter count is: </p>
+<script type="math/tex; mode=display">h*w*c1*c2</script><p>The example is as follows:<br><img src="/2019/06/05/Cnn-Network-on-Mobile-Device/standard_conv.png" width="50%" height="50%"><br>input size is <script type="math/tex">4*4*4</script> and the filters size is <script type="math/tex">2*2*4</script>, (padding=0, stride=1), output size is <script type="math/tex">3*3*4</script>, so the parameter count is: </p>
 <script type="math/tex; mode=display">2*2*4*4=64</script><h2 id="1-2-Group-convolution"><a href="#1-2-Group-convolution" class="headerlink" title="1.2 Group convolution"></a>1.2 Group convolution</h2><p>If the input size is <script type="math/tex">h1*w1*c1</script>, the filters size is <script type="math/tex">h*w*c1</script>, the output size is <script type="math/tex">h2*w2*c2</script>. The input channels and filters will be divided into <script type="math/tex">g</script> groups where each the filters in each filter group are convolved with only <script type="math/tex">\frac{c1}{g}</script> previous layer’s featuremaps, the parameter count will be: </p>
 <script type="math/tex; mode=display">h*w*\frac{c1}{g}*\frac{c2}{g}*g</script><p>The example is as follows:<br><img src="/2019/06/05/Cnn-Network-on-Mobile-Device/group_conv.png" width="50%" height="50%"><br>input size is <script type="math/tex">4*4*4</script> and the input channels are divided into 2 groups, so the size of per group is <script type="math/tex">4*4*\frac{4}{2}</script>, the filters size is <script type="math/tex">2*2*\frac{4}{2}</script>, (padding=0, stride=1), output size is <script type="math/tex">3*3*4</script>, so the parameter count is:</p>
 <script type="math/tex; mode=display">2*2*\frac{4}{2}*\frac{4}{2}*2=32</script><p>Compared with normal convolution with same input/output size, the parameter count of group convolution will reduce to <script type="math/tex">\frac{1}{g}</script>.</p>
