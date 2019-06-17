@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[testmodel]]></title>
-    <url>%2F2019%2F06%2F05%2Ftestmodel%2F</url>
-    <content type="text"></content>
+    <title><![CDATA[Cnn Network on Mobile Device]]></title>
+    <url>%2F2019%2F06%2F05%2FCnn-Network-on-Mobile-Device%2F</url>
+    <content type="text"><![CDATA[1 Depthwise Separable Convolutions1.1 Normal Convolution:Every chanel of the input will be connected to the per channel of the output. If the input size is $h1w1c1$, the filters size is $hwc1$, the output size is $h2w2c2$, the parameter count will be: h*w*c1*c2The example is as follows:input size is $444$ and the filters size is $224$, (padding=0, stride=0), output size is $334$, so the parameter count is: 2*2*4*4=64 1.2 Group convolutionIf the input size is $h1w1c1$, the filters size is $hwc1$, the output size is $h2w2c2$. The input channels and filters will be divided into $g$ groups where each the filters in each filter group are convolved with only $\frac{c1}{g}$ previous layer’s featuremaps, the parameter count will be: h*w*\frac{c1}{g}*\frac{c2}{g}*gThe example is as follows:input size is $444$ and the input channels are divided into 2 groups, so the size of per group is $44\frac{4}{2}$, the filters size is $22\frac{4}{2}$, (padding=0, stride=0), output size is $334$, so the parameter count is: 2*2*\frac{4}{2}*\frac{4}{2}*2=32Compared with normal convolution with same input/output size, the parameter count of group convolution will reduce to $\frac{1}{g}$. 1.3 Seperable convolutionDepthwise separable convolutions factorize a standard convolution into a depthwise convolution and a 1×1 convolution called a pointwise convolution. For MobileNets the depthwise convolution applies a single filter to each input channel. The pointwise convolution then applies a 1×1 convolution to combine the outputs the depthwise convolution. For instance, a depthwise separable convolution layer takes as input a $h1w1c1$ feature map and produce a $h2w2c2$ feature map, the filters size is $hwc1$, depthwise convolution’s parameter count is :h*w*1*c1and the pointwise convolution’s parameter count is : 1*1*c1*c2So the general parameter count of seperable convolution is $hw1c1+11c1c2$ , which reduces to $\frac{1}{c2}+\frac{1}{hw}$ of standard convolution.The example is as follows:input size is $444$ and depthwise convolution filter size is $224$, output size is output size is $334$ (padding=0, stride=0), so the parameter count is: $$2214+114*4=32$$ 2 IGCV series3 shufflenet series4 mobilenet series4.1 mobilenet v1]]></content>
+      <categories>
+        <category>paper notes</category>
+      </categories>
+      <tags>
+        <tag>mobile_net face_recognition</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[fate books]]></title>
