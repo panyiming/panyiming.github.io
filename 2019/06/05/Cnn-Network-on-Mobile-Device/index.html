@@ -150,7 +150,7 @@
 <meta property="og:image" content="https://panyiming.github.io/2019/06/05/Cnn-Network-on-Mobile-Device/mobilev3_small.png">
 <meta property="og:image" content="https://panyiming.github.io/2019/06/05/Cnn-Network-on-Mobile-Device/mobilenetv3_float_performance.png">
 <meta property="og:image" content="https://panyiming.github.io/2019/06/05/Cnn-Network-on-Mobile-Device/quanted_performance.png">
-<meta property="og:updated_time" content="2019-06-21T11:18:46.563Z">
+<meta property="og:updated_time" content="2019-06-22T07:53:49.148Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Cnn Network On Mobile Device">
 <meta name="twitter:description" content="1 Depthwise Separable Convolutions1.1 Normal Convolution:Every chanel of the input  will be connected to the per channel of the output. If the input size is h_{1} \times w_{1} \times c_{1}, the filter">
@@ -436,8 +436,8 @@
 <h2 id="4-2-Mobilenet-v2"><a href="#4-2-Mobilenet-v2" class="headerlink" title="4.2 Mobilenet v2"></a>4.2 Mobilenet v2</h2><h3 id="4-2-1-Depthwise-Separable-Convolutions-Depthwise"><a href="#4-2-1-Depthwise-Separable-Convolutions-Depthwise" class="headerlink" title="4.2.1 Depthwise Separable Convolutions Depthwise"></a>4.2.1 Depthwise Separable Convolutions Depthwise</h3><p>MobileNetV2 uses k = 3 (3×3 depthwise separable convolutions) so the computational cost is 8 to 9 times smaller than that of standard convolutions at only a small reduction in accuracy.</p>
 <h3 id="4-2-2-Linear-Bottlenecks"><a href="#4-2-2-Linear-Bottlenecks" class="headerlink" title="4.2.2 Linear Bottlenecks"></a>4.2.2 Linear Bottlenecks</h3><p>The manifold of interest should lie in a low-dimensional subspace of the higher-dimensional activation space:</p>
 <ul>
-<li>If the manifold of interest remains non-zero vol- ume after ReLU transformation, it corresponds to a linear transformation.</li>
-<li>ReLU is capable of preserving complete informa- tion about the input manifold, but only if the input manifold lies in a low-dimensional subspace of the input space.</li>
+<li>If the manifold of interest remains non-zero volume after ReLU transformation, it corresponds to a linear transformation.</li>
+<li>ReLU is capable of preserving complete information about the input manifold, but only if the input manifold lies in a low-dimensional subspace of the input space.</li>
 </ul>
 <p>These two insights provide us with an empirical hint for optimizing existing neural architectures: assuming the manifold of interest is lowdimensional we can capture this by inserting linear bottleneck layers into the convolutional blocks.</p>
 <h3 id="4-2-3-Inverted-Residuals"><a href="#4-2-3-Inverted-Residuals" class="headerlink" title="4.2.3 Inverted Residuals"></a>4.2.3 Inverted Residuals</h3><p>The motivation for inserting shortcuts is similar to that of classical residual connections: we want to improve the ability of a gradient to propagate across multiplier layers. However, the inverted design is considerably more memory efficient, as well as works slightly better in author’s experiments.</p>
@@ -451,7 +451,7 @@
 <li>The architecture of MobileNetV2 contains the initial fully convolution layer with 32 filters, followed by 19 residual bottleneck layers.</li>
 <li>We use ReLU6 as the non-linearity because of its robustness when used with low-precision computation.</li>
 <li>We always use kernel size 3×3 as is standard for modern networks, and utilize dropout and batch normalization during training.</li>
-<li>With the exception of the first layer, we use constant<br>expansion rate throughout the network. For all our main experiments we use expansion factor of 6 applied to the size of the input tensor.</li>
+<li>With the exception of the first layer, we use constant expansion rate throughout the network. For all our main experiments we use expansion factor of 6 applied to the size of the input tensor.</li>
 </ul>
 <p><img src="/2019/06/05/Cnn-Network-on-Mobile-Device/mobilev2_arc.png" width="50%" height="50%"></p>
 <p>Each line describes a sequence of 1 or more identical layers, repeated n times. All layers in the same sequence have the same number c of output channels. The first layer of each sequence has a stride s and all others use stride 1. All spatial convolutions use 3 × 3 kernels. The expansion factor t is always applied to the input size as described in Table.</p>
@@ -479,13 +479,10 @@
 <script type="math/tex; mode=display">swish(x) = x · σ(x)</script><p>We replace sigmoid function with its piece-wise linear hard analog:</p>
 <script type="math/tex; mode=display">hswish(x) = x \frac{Relu6(x+3)}{6}</script><p><img src="/2019/06/05/Cnn-Network-on-Mobile-Device/hswich.png" width="50%" height="50%"></p>
 <ul>
-<li><p>First, optimized implementations of ReLU6 are available on virtually all software and hardware frameworks.</p>
-</li>
-<li><p>Second, in quantized mode, it eliminates potential numerical precision loss caused by different implementations of the approximate sig- moid. </p>
-</li>
-<li><p>Finally, even optimized implementations of quan- tized sigmoid tend to be far slower than their ReLU coun- terparts. In our experiments, replacing h-swish with swish in quantized mode increased inference latency by 15%.</p>
-</li>
-<li>The cost of applying nonlinearity decreases as we go deeper into the network. We find that most of the benefits swish are realized by using them only in the deeper layers. Thus in our ar- chitectures we only use h-swish at the second half of the model.</li>
+<li>First, optimized implementations of ReLU6 are available on virtually all software and hardware frameworks.</li>
+<li>Second, in quantized mode, it eliminates potential numerical precision loss caused by different implementations of the approximate sigmoid. </li>
+<li>Finally, even optimized implementations of quantized sigmoid tend to be far slower than their ReLU counterparts. In our experiments, replacing h-swish with swish in quantized mode increased inference latency by 15%.</li>
+<li>The cost of applying nonlinearity decreases as we go deeper into the network. We find that most of the benefits swish are realized by using them only in the deeper layers. Thus in our architectures we only use h-swish at the second half of the model.</li>
 </ul>
 <h3 id="4-3-4-MobileNetV3-Architecture"><a href="#4-3-4-MobileNetV3-Architecture" class="headerlink" title="4.3.4 MobileNetV3 Architecture"></a>4.3.4 MobileNetV3 Architecture</h3><ul>
 <li>mobilenetv3 large</li>
