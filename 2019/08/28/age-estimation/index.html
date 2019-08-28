@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Fjalla One:300,300italic,400,400italic,700,700italic|Fjalla One:300,300italic,400,400italic,700,700italic|Noto Serif SC:300,300italic,400,400italic,700,700italic|Fjalla One:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="face_recognition,age estimation,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="1 open data link IMDB-WIKI  CHALEARN  MORPH    2 Introduction of age estimationThere are three difficuties of age estimation:  First, compared with image classification or face recognition, existing a">
+<meta name="keywords" content="face_recognition,age estimation">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Age Estimation">
+<meta property="og:url" content="https://panyiming.github.io/2019/08/28/age-estimation/index.html">
+<meta property="og:site_name" content="PYM">
+<meta property="og:description" content="1 open data link IMDB-WIKI  CHALEARN  MORPH    2 Introduction of age estimationThere are three difficuties of age estimation:  First, compared with image classification or face recognition, existing a">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="https://panyiming.github.io/2019/08/28/age-estimation/age_es1.jpg">
+<meta property="og:image" content="https://panyiming.github.io/2019/08/28/age-estimation/age_es2.jpg">
+<meta property="og:image" content="https://panyiming.github.io/2019/08/28/age-estimation/age_es3.jpg">
+<meta property="og:image" content="https://panyiming.github.io/2019/08/28/age-estimation/age_es4.jpg">
+<meta property="og:image" content="https://panyiming.github.io/2019/08/28/age-estimation/age_es5.jpg">
+<meta property="og:image" content="https://panyiming.github.io/2019/08/28/age-estimation/age_es6.jpg">
+<meta property="og:image" content="https://panyiming.github.io/2019/08/28/age-estimation/age_es7.jpg">
+<meta property="og:image" content="https://panyiming.github.io/2019/08/28/age-estimation/age_es8.jpg">
+<meta property="og:updated_time" content="2019-08-28T11:53:50.998Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Age Estimation">
+<meta name="twitter:description" content="1 open data link IMDB-WIKI  CHALEARN  MORPH    2 Introduction of age estimationThere are three difficuties of age estimation:  First, compared with image classification or face recognition, existing a">
+<meta name="twitter:image" content="https://panyiming.github.io/2019/08/28/age-estimation/age_es1.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"hide","offset":10,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://panyiming.github.io/2019/08/28/age-estimation/">
+
+
+
+
+
+  <title>Age Estimation | PYM</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">PYM</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">Valar Morghulis, Valar Dohaeris</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://panyiming.github.io/2019/08/28/age-estimation/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Pan Yiming">
+      <meta itemprop="description" content="learning, thinking, doing">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="PYM">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">Age Estimation</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-08-28T19:26:31+08:00">
+                2019-08-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-notes/" itemprop="url" rel="index">
+                    <span itemprop="name">paper notes</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="1-open-data-link"><a href="#1-open-data-link" class="headerlink" title="1 open data link"></a>1 open data link</h2><ul>
+<li><p><a href="https://data.vision.ee.ethz.ch/cvl/rrothe/imdb-wiki/" target="_blank" rel="noopener">IMDB-WIKI</a></p>
+</li>
+<li><p><a href="http://chalearnlap.cvc.uab.es/" target="_blank" rel="noopener">CHALEARN</a></p>
+</li>
+<li><p><a href="https://uncw.edu/oic/tech/morph.html" target="_blank" rel="noopener">MORPH</a></p>
+</li>
+</ul>
+<hr>
+<h2 id="2-Introduction-of-age-estimation"><a href="#2-Introduction-of-age-estimation" class="headerlink" title="2 Introduction of age estimation"></a>2 Introduction of age estimation</h2><p>There are three difficuties of age estimation:</p>
+<ul>
+<li>First, compared with image classification or face recognition, existing age estimation datasets are always limited because it is very hard to gather complete and sufficient age labeled dataset.</li>
+<li><p>Second, the number of images is very imbalanced in differnt age groups, which will bring a serious challenge for developing an unbiased estimation system. Number of age distribution of IMDB-WIKI is as follows:<br><img src="/2019/08/28/age-estimation/age_es1.jpg" width="70%" height="70%"></p>
+</li>
+<li><p>Third, age estimation is a very fine-gained recongniton task. It is even very difficult for human beings to recognize the exact age number of a face.</p>
+</li>
+</ul>
+<p>So to develop a roubust and accurate age estimation system, we must consider the age estimation is different from common image classification problems. For example, the differnce between the face of 26 and 27 is too small to recognize. To solve this problem, there are mainly two kinds of method:</p>
+<ul>
+<li>ranking based age estimation </li>
+<li>label distribution learning</li>
+</ul>
+<p>Besides, the effect of commbination between these two method is very effective too.</p>
+<hr>
+<h2 id="3-ranking-based-age-estimation"><a href="#3-ranking-based-age-estimation" class="headerlink" title="3 ranking based age estimation"></a>3 ranking based age estimation</h2><h3 id="3-1-Ranking-CNN"><a href="#3-1-Ranking-CNN" class="headerlink" title="3.1 Ranking-CNN"></a>3.1 Ranking-CNN</h3><ul>
+<li><p><strong>Intriduction</strong><br>Ranking-CNN is the first work that uses a deep ranking model for age estimation, in which binary ordinal age labels are used to train a series of basic CNNs. Ranking-CNN, by taking the ordinal relation between ages into consideration, is more likely to get smaller estimation errors when compared with multi-class classification approache.</p>
+</li>
+<li><p><strong>Ranking-CNN architechture</strong> </p>
+<ul>
+<li><strong>Basic Binary CNNs</strong><br>A basic CNN has three convolutionaland sub-sampling layers, and three fully connected layers. Specifically, C1 is the first convolutional layer with feature maps connected to a 5×5 neighboring area in the input. There are 96 filters applied to each of the 3 channels (RGB) of the input, followed by ReLU. S2 is a sub-sampling layer with feature maps connected to corresponding feature maps in C1. In this paper, the authors use max pooling on 3×3 regions with the stride of 2 to emphasize the most responsive points in the feature maps. S2 is followed by local response normalization that can aid generalization. C3 works in a similar way as C1 with 256 filters in 96 channels and 5×5 filter size followed by ReLU. Layer S4 functions similarly as S2, and is followed by LRN. Then, C5 is the third convolutional layer with 384 filters in 256 channels and smaller filter size 3×3, followed by the third max pooling layer S6. F7 is the first fully connected layer in which the featuremaps are flattened into a feature vector. There are 512 neurons in F7 followed by ReLU and a dropout layer. F8 is the second fully connected layer with 512 neurons that receives the output from F7 followed by ReLU and another dropout layer. F9 is the third fully connected layer and computes the probability that an input x  belongs to class i using the logistic function. The optimal model parameters of a network are typically learned through minimizing a loss function. The authours use the negative log-likelihood as the loss function, and minimize it using stochastic gradient descent.</li>
+</ul>
+</li>
+</ul>
+<p><img src="/2019/08/28/age-estimation/age_es2.jpg" width="70%" height="70%"></p>
+<ul>
+<li><strong>whole network structure</strong></li>
+</ul>
+<p><img src="/2019/08/28/age-estimation/age_es3.jpg" width="70%" height="70%"></p>
+<p>If the age label number is K, then there will be K-1 basic CNN networks to be trained. To train the k-th binary CNN, the entire dataset D is split into two subsets, with age values higher or lower (or equal to) than k. Each basic network is trained using the entire dataset.</p>
+<script type="math/tex; mode=display">D^{+}_{k} = \{ x_\{i\}+1|y_{i}>k\} ,  D^{-}_{k}= \{ x_{i}+1|y_{i} \leq k \}</script><ul>
+<li><strong>inference</strong><br>Given an unknown input xi, we first use the basic networks to make a set of binary decisions and then aggre-gate them to make the final age prediction. <script type="math/tex">f(x)</script> is the output of basic network and [.] denotes the true-test operator, which is 1 if the inner condition is true, and 0 otherwise.   :<script type="math/tex; mode=display">r(x_{i}) = 1 + \sum^{K-1}_{k=1}[f_{k}(x_{i})>0]</script></li>
+</ul>
+<hr>
+<h2 id="4-Label-Distribution-Learning-age-estimation"><a href="#4-Label-Distribution-Learning-age-estimation" class="headerlink" title="4 Label Distribution Learning age estimation"></a>4 Label Distribution Learning age estimation</h2><hr>
+<h3 id="4-1-Mean-Variance-Loss"><a href="#4-1-Mean-Variance-Loss" class="headerlink" title="4.1 Mean-Variance Loss"></a>4.1 Mean-Variance Loss</h3><ul>
+<li><strong>introduction</strong></li>
+</ul>
+<p>In our approach, the authors also use the weights of softmax to calculate a weighted average age, but they use the method in both the training and the testing phases. Besides, they penalize the variance so that the estimated age distribution could take a sharp shape, which is important to obtain an age estimate as accurate as possible. In addition, the proposed approach does not require each training face image to have a mean age and a variance value. Distribution learning is proposed to address problems due to label ambiguity. Different from single label learning or multi-label learning, which assigns a single label or multiple labels to an object, distribution learning assigns a label distribution to an object. Compared to single label learning and multi-label learning, distribution learning is able to leverage the relative relationship of a sequence of values in the label space, leading to more robust estimation. The framwork proposed in this paper is as follows:</p>
+<p><img src="/2019/08/28/age-estimation/age_es4.jpg" width="70%" height="70%"></p>
+<p>The paper proposed mean-variance loss, together with the softmax loss, is embedded into a CNN for end-to-end learning.</p>
+<ul>
+<li><strong>Mean-Variance Loss</strong></li>
+</ul>
+<p>Formally, let <script type="math/tex">x_{i}</script>denote the feature vector of the <script type="math/tex">i-th</script> sample, <script type="math/tex">y_{i}\in {1,2,...,k}</script> denote the corresponding age label, and <script type="math/tex">f(x_{i})\in R^{N\times M}</script>  denote the output of a CNN ahead of the last fully connected <script type="math/tex">FC</script> layer. The output of the last <script type="math/tex">FC</script> layer (<script type="math/tex">z\in R^{N\times K}</script>), and a typical softmax (<script type="math/tex">P\in R^{N\times K}</script>) probability can be computed using:<br>
+
+$$z=f(x_{i})\theta ^{T},      p_{i,j} = {{e^{z_{i,j}}}\over{\sum^{K}_{k=1} e_{z_{i,j}}}}$$
+
+</p>
+<p>where<script type="math/tex">\theta \in R^{K \times M}</script>  is the parameter of the last FC layer, and <script type="math/tex">z_{i,j}</script> is one element of <script type="math/tex">z; j \in {1,2, ...,K}</script> denotes the class labels (here it denotes the age); So pi denotes the estimated age distribution for sample i over all the K classes, and <script type="math/tex">p_{i,j}</script> denotes the probability that sample i belongs to class <script type="math/tex">j</script>. We can compute the mean (<script type="math/tex">m_i</script>) and the variance(<script type="math/tex">v_j</script>) of a distribution (<script type="math/tex">p_i</script>) as follow</p>
+<script type="math/tex; mode=display">m_{i} = \sum^{K}_{j=1}j*p_{i,j}</script><script type="math/tex; mode=display">v_{i} = \sum^{K}_{j=1}p_{i,j}*(j-m)^2</script><ul>
+<li>Mean Loss:<br>The mean loss component in  mean-variance loss penalizes the difference between the mean of an estimated age distribution and the ground-truth age. The mean loss can be computed as:<script type="math/tex; mode=display">L_m = {1 \over 2N} \sum^{N}_{i=1}(m_i-y_i)^2 = {1 \over 2N} \sum^{N}_{i=1}(\sum^{K}_{j=1}j*p_{i,j}-y_i)^2</script></li>
+<li>Variance Loss:<br>The variance loss component in our mean-variance loss penalizes the dispersion of an estimated age distribution.the variance loss can be computed as<script type="math/tex; mode=display">L_v = {1 \over N} \sum^{N}_{i=1} v_i = {1 \over N} \sum^{N}_{i=1} \sum^{K}_{j=1}p_{i,j}*(j-\sum^{K}_{k=1}k*p_{i,k}^2)</script></li>
+</ul>
+<p>Specifically, we embed our mean-variance loss into the architecture of CNNs, and use the softmax loss and mean-variance loss jointly as the supervision signal.</p>
+<script type="math/tex; mode=display">L = L_s+\lambda_1L_m+\lambda_2L_v</script><p>where <script type="math/tex">\lambda_1</script> and <script type="math/tex">\lambda_2</script> are two hyper-parameters, balancing the influencing of individual sub-losses in the joint loss. </p>
+<hr>
+<h3 id="4-2-Deep-Label-Distribution-Learning"><a href="#4-2-Deep-Label-Distribution-Learning" class="headerlink" title="4.2 Deep Label Distribution Learning"></a>4.2 Deep Label Distribution Learning</h3><ul>
+<li><p><strong>Intriduction</strong><br>Given an input image, we are interested in estimating a category output y. For two input images X1 and X2 with ground-truth labels y1 and y2, X1 and X2 are supposed to be similar to each other if the correlation of y1 and y2 is strong, and vice versa. For example, the correlation between faces aged 32 and 33 should be 9 than that between faces aged 32 and 64, in terms of facial details that reflect the age. In other words, we expect high correlation among input images with similar outputs.</p>
+</li>
+<li><p><strong>Deep label distribution learning</strong><br>Given an instance X with label distribution y, we assume that <script type="math/tex">x = \Phi (X; θ)</script> is the activation of the last fully connected layer in a deep ConvNet. We use a softmax function to turn these activations into a probability distribution, that is:</p>
+<script type="math/tex; mode=display">\hat{y} ={ exp(x_j) \over \sum_t exp(x_t)}</script><p>Given a training data set D, the goal of DLDL is to find θ to generate a distribution <script type="math/tex">\hat{y}</script> that is similar to <script type="math/tex">y</script>. if the Kullback-Leibler (KL) divergence is used as the measurement of the similarity between the ground-truth and predicted label distribution, we can define the loss function as:</p>
+</li>
+</ul>
+<script type="math/tex; mode=display">T = - \sum_k y_k In \hat{y}_k</script><ul>
+<li><p><strong>Label distribution construction</strong><br>A desirable label distribution <script type="math/tex">y = (y_1, y_2, . . . , y_C)</script> must satisfy some basic principles: (1) <script type="math/tex">y</script> should be a probability distribution. Thus, we have <script type="math/tex">yi \in  [0, 1]  \ \& \sum^{C}_{i=1} y_i=1</script>.(2) The probability values <script type="math/tex">y_i</script> should have difference among all possible labels associated with an image.<br>For age estimation, we assume that the probabilities should concentrate around the ground-truth age y.Thus, we quantize y to get y using a normal distribution.Since we use equal step size in quantizing y, the normal probability density function is a natural choice to generate the ground-truth y from <script type="math/tex">\mu</script> and <script type="math/tex">\sigma</script>:</p>
+
+
+$$y_i= {{p(l_j| \mu,\sigma)}\over{\sum_k p(l_k|\mu,\sigma)}}$$
+$$p(l_j|\mu, \sigma) = {1\over \sqrt{2\pi} \sigma} exp(-{{(l_j-\mu)^2}\over{2\sigma^2}})$$
+
+</li>
+<li><p><strong>the predict of several examples</strong></p>
+</li>
+</ul>
+<p><img src="/2019/08/28/age-estimation/age_es5.jpg" width="70%" height="70%"></p>
+<ul>
+<li><strong>test results</strong></li>
+</ul>
+<p><img src="/2019/08/28/age-estimation/age_es6.jpg" width="70%" height="70%"></p>
+<hr>
+<h3 id="4-3-Expectation-of-Label-Distribution-Learning"><a href="#4-3-Expectation-of-Label-Distribution-Learning" class="headerlink" title="4.3 Expectation of Label Distribution Learning"></a>4.3 Expectation of Label Distribution Learning</h3><p>Note that the  Deep Label Distribution Learning  only learns a label distribution but cannot regress a precise value. In order to reduce the inconsis- tency between training and evaluation stages, we propose an expectation regression module to further refine the predicted value.<br><img src="/2019/08/28/age-estimation/age_es7.jpg" width="70%" height="70%"></p>
+<ul>
+<li><strong>The Label Distribution Learning Module</strong><br>This module follows the DLDL method.</li>
+<li><strong>The Expectation Regression Module</strong><br>Note that the LDL module only learns a label distribution but cannot regress a precise value. In order to reduce the inconsis- tency between training and evaluation stages, we propose an expectation regression module to further refine the predicted value.The expectation layer takes the predicted distribution and label set as input and outputs its expectation:<script type="math/tex; mode=display">\hat{y} = \sum_k \hat{p_k} l_k</script>Given an input image, the expectation regression module minimizes the error between the expected value <script type="math/tex">\hat{y}</script> and ground-truth<script type="math/tex">y</script>. We use <script type="math/tex">L_1</script> loss as the error mea- surement as follows:<script type="math/tex; mode=display">l_{er}=|\hat{y}-y|</script></li>
+</ul>
+<hr>
+<h2 id="6-evaluation"><a href="#6-evaluation" class="headerlink" title="6 evaluation"></a>6 evaluation</h2><ul>
+<li><strong>Mean Absolute Error (MAE)</strong></li>
+</ul>
+<script type="math/tex; mode=display">MAE = {1\over N } \sum^{N}_{n=1}|\hat{l_n}-l_n|</script><p>where <script type="math/tex">\hat{l_n}</script> and <script type="math/tex">l_n</script> are the estimated and ground-truth age of the n-th testing image, respectively. </p>
+<ul>
+<li><strong>Cumulative Score (CS)</strong><br>CS is defined as the accuracy rate of correct estimation:<script type="math/tex; mode=display">CS_g = {C_g\over{N}}\times100 \%</script>where <script type="math/tex">C_g</script> is the number of correct estimation, testing images that satisfy <script type="math/tex">|\hat{l_n}-l_n|\leq g</script>. </li>
+<li><p><strong>$\epsilon- error$</strong></p>
+
+$$\epsilon = {1\over N} \sum_{n=1}^{N} (1-exp(-{{(\hat{l_n}-l_n)^2}\over{2\sigma^2_n}}))$$
+
+</li>
+<li><p><strong>confusion matrix</strong><br><img src="/2019/08/28/age-estimation/age_es8.jpg" width="70%" height="70%"></p>
+</li>
+</ul>
+<hr>
+<h1 id="References"><a href="#References" class="headerlink" title="References"></a>References</h1><p><a href="http://openaccess.thecvf.com/content_cvpr_2017/poster/2148_POSTER.pdf" target="_blank" rel="noopener">1, Using Ranking-CNN for Age Estimation Shixing</a><br><a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Pan_Mean-Variance_Loss_for_CVPR_2018_paper.pdf" target="_blank" rel="noopener">2, Mean-Variance Loss for Deep Age Estimation from a Face</a><br><a href="http://202.119.32.195/cache/2/03/lamda.nju.edu.cn/f580f8d1a5c54ac3915fd65d76564f48/IJCAI2018_DLDLv2.pdf" target="_blank" rel="noopener">3, Age Estimation Using Expectation of Label Distribution Learning</a><br><a href="https://arxiv.org/pdf/1611.01731.pdf" target="_blank" rel="noopener">4, Deep Label Distribution Learning With Label Ambiguity</a></p>
+<hr>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>Post author:</strong>
+    Pan Yiming
+  </li>
+  <li class="post-copyright-link">
+    <strong>Post link:</strong>
+    <a href="https://panyiming.github.io/2019/08/28/age-estimation/" title="Age Estimation">https://panyiming.github.io/2019/08/28/age-estimation/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Copyright Notice: </strong>
+    All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> unless stating additionally.
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/face-recognition/" rel="tag"># face_recognition</a>
+          
+            <a href="/tags/age-estimation/" rel="tag"># age estimation</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/06/05/Cnn-Network-on-Mobile-Device/" rel="next" title="Cnn Network On Mobile Device">
+                <i class="fa fa-chevron-left"></i> Cnn Network On Mobile Device
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Pan Yiming</p>
+              <p class="site-description motion-element" itemprop="description">learning, thinking, doing</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/panyiming" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:panyiming1993@gmail.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-open-data-link"><span class="nav-text">1 open data link</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-Introduction-of-age-estimation"><span class="nav-text">2 Introduction of age estimation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-ranking-based-age-estimation"><span class="nav-text">3 ranking based age estimation</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-Ranking-CNN"><span class="nav-text">3.1 Ranking-CNN</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-Label-Distribution-Learning-age-estimation"><span class="nav-text">4 Label Distribution Learning age estimation</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-Mean-Variance-Loss"><span class="nav-text">4.1 Mean-Variance Loss</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-Deep-Label-Distribution-Learning"><span class="nav-text">4.2 Deep Label Distribution Learning</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3-Expectation-of-Label-Distribution-Learning"><span class="nav-text">4.3 Expectation of Label Distribution Learning</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-evaluation"><span class="nav-text">6 evaluation</span></a></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#References"><span class="nav-text">References</span></a></li></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Pan Yiming</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config("");
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src>
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+  
+
+
+  
+
+  
+
+</body>
+</html>
