@@ -16,11 +16,15 @@ body {
     background: #ffffff;
     color: #272727;
 
-    font-family: "Source Serif 4", Georgia, serif;
+    /* Clean Helvetica-style body text */
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue",
+                 Helvetica, Arial, sans-serif;
+
     font-size: 17px;
     line-height: 1.7;
 
     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 
@@ -92,6 +96,7 @@ body {
    TYPOGRAPHY
    ========================================================= */
 
+/* Keep the current Inter style for all headings */
 h1,
 h2,
 h3 {
@@ -236,7 +241,7 @@ p {
 }
 
 .institution {
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .degree {
@@ -342,5 +347,4 @@ footer {
     .date {
         margin-top: 4px;
     }
-
 }
