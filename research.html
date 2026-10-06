@@ -4,231 +4,174 @@
 <head>
     <meta charset="UTF-8">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-    <meta
-        name="description"
-        content="Research by Pan Yiming — empirical asset pricing, short selling, securities lending, and machine learning in finance."
-    >
+    <title>Research | Yiming Pan</title>
 
-    <title>Research — Pan Yiming</title>
+    <meta name="description"
+          content="Research by Yiming Pan, PhD Candidate in Finance at Vienna Graduate School Of Finance.">
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
 
     <link
-        rel="stylesheet"
-        href="main.css"
-    >
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="/css/main.css">
 </head>
 
 
 <body>
 
-    <!-- =====================================================
-         NAVIGATION
-         ===================================================== -->
+<header class="site-header">
 
-    <header class="site-header">
+    <nav class="nav">
 
-        <nav class="nav">
+        <a class="site-name" href="/">
+            Yiming Pan
+        </a>
 
-            <a
-                href="index.html"
-                class="site-name"
-            >
-                Pan Yiming
-            </a>
-
-            <div class="nav-links">
-
-                <a href="index.html">
-                    Home
-                </a>
-
-                <a
-                    href="research.html"
-                    class="active"
-                >
-                    Research
-                </a>
-
-            </div>
-
-        </nav>
-
-    </header>
-
-
-    <!-- =====================================================
-         MAIN
-         ===================================================== -->
-
-    <main class="container">
-
-
-        <!-- =================================================
-             PAGE TITLE
-             ================================================= -->
-
-        <header class="page-header">
-
-            <h1>
-                Research
-            </h1>
-
-        </header>
-
-
-        <!-- =================================================
-             JMP
-             ================================================= -->
-
-        <article class="paper">
-
-            <h2 class="paper-title">
-                Fee or Quantity? Lender Base Concentration and the Effective Short-sale Constraint
-            </h2>
-
-            <p class="paper-status">
-                Job Market Paper
-            </p>
-
-            <div class="paper-links">
-
-                <!--
-                <a
-                    href="papers/jmp.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Paper
-                </a>
-                -->
-
-            </div>
-
-            <p class="abstract">
-                Borrowing fees measure the spot price of borrowing shares,
-                but short arbitrage requires durable borrow access. I study
-                this non-price dimension of short-sale constraints through
-                the concentration of lendable inventory across lenders.
-                Using securities-lending data, I show that concentrated
-                lendable supply predicts greater borrow fragility: quantity
-                responds less elastically to borrowing demand, while fees
-                become more sensitive to utilization and more unstable.
-                High-concentration stocks also incorporate negative
-                information more slowly and exhibit substantially larger
-                anomaly returns, with the difference concentrated in the
-                short leg. The evidence suggests that lender concentration
-                is a structural source of effective short-sale constraints
-                beyond observed borrowing fees.
-            </p>
-
-        </article>
-
-
-        <!-- =================================================
-             BOND ML PAPER
-             ================================================= -->
-
-        <article class="paper">
-
-            <h2 class="paper-title">
-                Prediction Targets for Cross-Sectional Bond Selection
-            </h2>
-
-            <div class="paper-links">
-
-                <!--
-                <a
-                    href="papers/bond_prediction.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Paper
-                </a>
-                -->
-
-            </div>
-
-            <p class="abstract">
-                Machine-learning models are typically trained to forecast
-                returns but used to rank securities into long–short
-                portfolios. I show that this mismatch matters in corporate
-                bonds. A return forecast partly fits market-wide return
-                variation that is common across bonds and therefore
-                uninformative for cross-sectional selection. Holding the
-                information set and model architecture fixed, I instead
-                forecast the probability that a bond outperforms the
-                contemporaneous cross-sectional median. Probability
-                forecasts produce substantially stronger cross-sectional
-                rankings and long–short portfolios with lower systematic
-                risk. The results show that the prediction target itself is
-                an economically important design choice in machine-learning
-                asset selection.
-            </p>
-
-        </article>
-
-
-        <!-- =================================================
-             CRYPTO PAPER
-             ================================================= -->
-
-        <article class="paper">
-
-            <h2 class="paper-title">
-                Shortability and Price Discovery in Cryptocurrency Markets
-            </h2>
-
-            <div class="paper-links">
-
-                <!--
-                <a
-                    href="papers/crypto_shortability.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Paper
-                </a>
-                -->
-
-            </div>
-
-            <p class="abstract">
-                When investors cannot sell short, theory predicts that prices
-                can overreact to positive information and underreact to
-                negative information. I test these predictions using the
-                staggered introduction of perpetual futures across
-                cryptocurrencies. Prior to becoming shortable, large positive
-                price jumps are followed by substantial reversal, whereas
-                negative jumps are followed by continued declines. Both
-                asymmetries decline sharply after perpetual futures listing.
-                The results provide asset-level evidence that short-selling
-                access improves the incorporation of both positive and
-                negative information into prices.
-            </p>
-
-        </article>
-
-
-    </main>
-
-
-    <!-- =====================================================
-         FOOTER
-         ===================================================== -->
-
-    <footer>
-
-        <div class="footer-content">
-            © 2026 Pan Yiming
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a class="active" href="/research.html">Research</a>
         </div>
 
-    </footer>
+    </nav>
+
+</header>
+
+
+<main class="container">
+
+    <h1>Research</h1>
+
+
+    <!-- ==========================================
+         JOB MARKET PAPER
+         ========================================== -->
+
+    <section class="section">
+
+        <h2>Job Market Paper</h2>
+
+
+        <article class="paper">
+
+            <h3 class="paper-title">
+                Lendable Inventory Concentration, Borrow Fragility, and Equity Pricing Anomalies
+            </h3>
+
+
+            <p class="paper-links">
+
+                <a href="/files/JMP.pdf">
+                    Paper
+                </a>
+
+                &nbsp;·&nbsp;
+
+                <a href="/files/JMP_slides.pdf">
+                    Slides
+                </a>
+
+            </p>
+
+
+            <p class="abstract">
+Borrowing fees measure the spot price of borrowing shares, but short arbitrage requires durable borrow access.
+I study this non-price dimension of short-sale constraints as borrow fragility: the risk that borrow access
+deteriorates after a short position is initiated. Using IHS Markit securities-lending data, I show that lendable
+in- ventory concentration predicts greater borrow fragility. Stocks whose lendable sup- ply is concentrated
+among fewer lenders experience more frequent lendable-quantity disruptions, greater fee instability, more severe
+fee and utilization tail events, and shorter loan tenure. High-concentration stocks incorporate negative earnings
+news more slowly and exhibit larger (fee-adjusted) anomaly return spreads, with the dif- ference driven primarily
+by the short leg. The evidence suggests that concentrated lendable inventory is a structural source of borrow
+fragility, limiting short arbitrage beyond borrowing fees and helping sustain anomaly-related mispricing.
+            </p>
+
+        </article>
+
+    </section>
+
+
+    <!-- ==========================================
+         WORKING PAPERS
+         ========================================== -->
+
+    <section class="section">
+
+        <h2>Working Papers</h2>
+
+
+        <article class="paper">
+
+            <h3 class="paper-title">
+                Paper Title
+            </h3>
+
+
+            <p class="paper-links">
+
+                <a href="/files/paper.pdf">
+                    Paper
+                </a>
+
+            </p>
+
+
+            <p class="abstract">
+                Put the abstract here.
+            </p>
+
+        </article>
+
+
+        <!-- COPY THIS ARTICLE BLOCK FOR MORE PAPERS -->
+
+    </section>
+
+
+    <!-- ==========================================
+         WORK IN PROGRESS
+         ========================================== -->
+
+    <section class="section">
+
+        <h2>Work in Progress</h2>
+
+
+        <article class="paper">
+
+            <h3 class="paper-title">
+                Project Title
+            </h3>
+
+            <p>
+                Short project description.
+            </p>
+
+        </article>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <div class="footer-content">
+        © 2026 Yiming Pan
+    </div>
+
+</footer>
 
 
 </body>
-
 </html>
