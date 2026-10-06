@@ -1,5 +1,5 @@
 /* =========================================================
-   RESET / BASE
+   BASE
    ========================================================= */
 
 * {
@@ -14,7 +14,7 @@ body {
     margin: 0;
 
     background: #ffffff;
-    color: #292929;
+    color: #272727;
 
     font-family:
         "Avenir Next",
@@ -26,9 +26,9 @@ body {
 
     font-size: 17px;
     font-weight: 400;
-    line-height: 1.62;
+    line-height: 1.6;
 
-    letter-spacing: -0.003em;
+    letter-spacing: -0.004em;
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -36,81 +36,53 @@ body {
 
 
 /* =========================================================
-   LINKS
-   ========================================================= */
-
-a {
-    color: #174a7e;
-}
-
-a:hover {
-    color: #103b67;
-}
-
-
-/* =========================================================
-   HEADER / NAVIGATION
+   NAVIGATION
    ========================================================= */
 
 .site-header {
-    width: 100%;
-
-    background: #ffffff;
-
-    border-bottom: 1px solid #ededed;
+    border-bottom: 1px solid #eeeeee;
 }
 
 .nav {
-    width: 100%;
     max-width: 920px;
 
     margin: 0 auto;
-    padding: 20px 24px 18px;
+    padding: 25px 24px;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    font-family:
+        "Avenir Next",
+        Avenir,
+        "Helvetica Neue",
+        Helvetica,
+        Arial,
+        sans-serif;
 }
-
-
-/* Name */
 
 .site-name {
-    color: #222222;
+    color: #181818;
 
-    font-size: 17px;
-    font-weight: 500;
+    font-size: 18px;
+    font-weight: 600;
 
-    letter-spacing: -0.012em;
+    letter-spacing: -0.015em;
 
     text-decoration: none;
-
-    transition: color 0.15s ease;
 }
-
-.site-name:hover {
-    color: #000000;
-}
-
-
-/* Menu */
 
 .nav-links {
     display: flex;
-    align-items: center;
-
-    gap: 28px;
+    gap: 32px;
 }
 
 .nav-links a {
-    position: relative;
-
-    padding: 2px 0;
-
     color: #666666;
 
     font-size: 14px;
-    font-weight: 400;
+    font-weight: 500;
 
     letter-spacing: 0;
 
@@ -119,29 +91,9 @@ a:hover {
     transition: color 0.15s ease;
 }
 
-.nav-links a:hover {
-    color: #111111;
-}
-
+.nav-links a:hover,
 .nav-links .active {
     color: #111111;
-
-    font-weight: 500;
-}
-
-.nav-links .active::after {
-    content: "";
-
-    position: absolute;
-
-    left: 0;
-    right: 0;
-
-    bottom: -5px;
-
-    height: 1px;
-
-    background: #444444;
 }
 
 
@@ -150,12 +102,10 @@ a:hover {
    ========================================================= */
 
 .container {
-    width: 100%;
     max-width: 870px;
 
     margin: 0 auto;
-
-    padding: 78px 24px 55px;
+    padding: 80px 24px 50px;
 }
 
 
@@ -168,7 +118,49 @@ h2,
 h3 {
     margin-top: 0;
 
-    color: #191919;
+    font-family:
+        "Avenir Next",
+        Avenir,
+        "Helvetica Neue",
+        Helvetica,
+        Arial,
+        sans-serif;
+
+    color: #181818;
+}
+
+h1 {
+    margin-bottom: 12px;
+
+    font-size: 42px;
+    font-weight: 600;
+    line-height: 1.15;
+
+    letter-spacing: -0.035em;
+}
+
+h2 {
+    margin-bottom: 24px;
+
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.3;
+
+    letter-spacing: -0.02em;
+}
+
+h3 {
+    margin-bottom: 8px;
+
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 1.35;
+
+    letter-spacing: -0.012em;
+}
+
+p {
+    margin-top: 0;
 
     font-family:
         "Avenir Next",
@@ -179,43 +171,9 @@ h3 {
         sans-serif;
 }
 
-h1 {
-    margin-bottom: 12px;
-
-    font-size: 42px;
-    font-weight: 600;
-    line-height: 1.14;
-
-    letter-spacing: -0.035em;
-}
-
-h2 {
-    margin-bottom: 23px;
-
-    font-size: 22px;
-    font-weight: 600;
-    line-height: 1.3;
-
-    letter-spacing: -0.022em;
-}
-
-h3 {
-    margin-bottom: 8px;
-
-    font-size: 19px;
-    font-weight: 600;
-    line-height: 1.4;
-
-    letter-spacing: -0.012em;
-}
-
-p {
-    margin-top: 0;
-}
-
 
 /* =========================================================
-   HOME — HERO
+   HERO
    ========================================================= */
 
 .hero {
@@ -224,50 +182,70 @@ p {
     justify-content: space-between;
     align-items: center;
 
-    gap: 65px;
+    gap: 70px;
 
-    margin-bottom: 78px;
+    margin-bottom: 80px;
 }
 
 .hero-content {
-    flex: 1;
-
     max-width: 610px;
 }
 
 .position {
     margin: 0;
 
-    color: #333333;
+    font-family:
+        "Avenir Next",
+        Avenir,
+        "Helvetica Neue",
+        Helvetica,
+        Arial,
+        sans-serif;
 
     font-size: 18px;
     font-weight: 500;
-
     line-height: 1.45;
+
+    color: #333333;
 }
 
 .affiliation {
     margin-top: 3px;
-    margin-bottom: 0;
 
-    color: #555555;
+    font-family:
+        "Avenir Next",
+        Avenir,
+        "Helvetica Neue",
+        Helvetica,
+        Arial,
+        sans-serif;
 
     font-size: 17px;
     font-weight: 400;
-
     line-height: 1.5;
+
+    color: #555555;
 }
 
 .bio {
     max-width: 620px;
 
-    margin-top: 26px;
+    margin-top: 25px;
     margin-bottom: 0;
 
-    font-size: 17px;
-    line-height: 1.62;
+    font-family:
+        "Avenir Next",
+        Avenir,
+        "Helvetica Neue",
+        Helvetica,
+        Arial,
+        sans-serif;
 
-    color: #292929;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.6;
+
+    letter-spacing: -0.004em;
 }
 
 
@@ -279,8 +257,6 @@ p {
     width: 185px;
     height: 220px;
 
-    flex-shrink: 0;
-
     object-fit: cover;
 
     border-radius: 3px;
@@ -288,16 +264,26 @@ p {
 
 
 /* =========================================================
-   PRIMARY LINKS
+   LINKS
    ========================================================= */
+
+a {
+    color: #174a7e;
+}
 
 .primary-links {
     display: flex;
-    flex-wrap: wrap;
+    gap: 24px;
 
-    gap: 22px;
+    margin-top: 30px;
 
-    margin-top: 29px;
+    font-family:
+        "Avenir Next",
+        Avenir,
+        "Helvetica Neue",
+        Helvetica,
+        Arial,
+        sans-serif;
 
     font-size: 14px;
     font-weight: 500;
@@ -308,7 +294,7 @@ p {
 
     text-decoration: none;
 
-    border-bottom: 1px solid #b9c9d8;
+    border-bottom: 1px solid #b8cadb;
 
     transition:
         color 0.15s ease,
@@ -323,24 +309,27 @@ p {
 
 
 /* =========================================================
-   GENERAL SECTIONS
+   SECTIONS
    ========================================================= */
 
 .section {
-    margin-top: 64px;
-}
-
-.section:first-of-type {
-    margin-top: 0;
+    margin-top: 65px;
 }
 
 .research-interests {
-    max-width: 760px;
-
-    margin-bottom: 0;
+    font-family:
+        "Avenir Next",
+        Avenir,
+        "Helvetica Neue",
+        Helvetica,
+        Arial,
+        sans-serif;
 
     font-size: 17px;
-    line-height: 1.62;
+    font-weight: 400;
+    line-height: 1.6;
+
+    letter-spacing: -0.004em;
 }
 
 
@@ -354,103 +343,115 @@ p {
     justify-content: space-between;
     align-items: flex-start;
 
-    gap: 35px;
+    gap: 30px;
 
     margin-bottom: 24px;
+
+    font-family:
+        "Avenir Next",
+        Avenir,
+        "Helvetica Neue",
+        Helvetica,
+        Arial,
+        sans-serif;
 
     font-size: 17px;
     line-height: 1.55;
 }
 
-.education-entry:last-child {
-    margin-bottom: 0;
-}
-
-.education-info {
-    flex: 1;
-}
-
 .institution {
-    color: #242424;
+    font-family:
+        "Avenir Next",
+        Avenir,
+        "Helvetica Neue",
+        Helvetica,
+        Arial,
+        sans-serif;
 
     font-weight: 600;
+
+    color: #242424;
 }
 
 .degree {
-    margin-top: 2px;
-
-    color: #555555;
+    font-family:
+        "Avenir Next",
+        Avenir,
+        "Helvetica Neue",
+        Helvetica,
+        Arial,
+        sans-serif;
 
     font-weight: 400;
+
+    color: #555555;
 }
 
 .date {
-    flex-shrink: 0;
-
     white-space: nowrap;
 
-    color: #6a6a6a;
+    font-family:
+        "Avenir Next",
+        Avenir,
+        "Helvetica Neue",
+        Helvetica,
+        Arial,
+        sans-serif;
 
     font-size: 16px;
     font-weight: 400;
+
+    color: #666666;
 }
 
 
 /* =========================================================
-   RESEARCH PAGE HEADER
-   ========================================================= */
-
-.page-header {
-    margin-bottom: 52px;
-}
-
-.page-header h1 {
-    margin-bottom: 0;
-}
-
-
-/* =========================================================
-   PAPER
+   RESEARCH PAGE
    ========================================================= */
 
 .paper {
-    max-width: 800px;
+    margin-bottom: 50px;
 
-    margin-bottom: 55px;
-}
-
-.paper:last-child {
-    margin-bottom: 0;
+    font-family:
+        "Avenir Next",
+        Avenir,
+        "Helvetica Neue",
+        Helvetica,
+        Arial,
+        sans-serif;
 }
 
 .paper-title {
-    margin: 0 0 7px;
+    margin-top: 0;
+    margin-bottom: 7px;
 
-    color: #191919;
+    font-family:
+        "Avenir Next",
+        Avenir,
+        "Helvetica Neue",
+        Helvetica,
+        Arial,
+        sans-serif;
 
     font-size: 19px;
     font-weight: 600;
-    line-height: 1.42;
+    line-height: 1.4;
 
     letter-spacing: -0.012em;
-}
 
-.paper-status {
-    margin: 0 0 7px;
-
-    color: #666666;
-
-    font-size: 14px;
-    font-weight: 500;
+    color: #181818;
 }
 
 .paper-links {
-    display: flex;
-    flex-wrap: wrap;
+    margin: 0 0 15px;
 
-    gap: 16px;
-
-    margin: 0 0 17px;
+    font-family:
+        "Avenir Next",
+        Avenir,
+        "Helvetica Neue",
+        Helvetica,
+        Arial,
+        sans-serif;
 
     font-size: 14px;
     font-weight: 500;
@@ -467,15 +468,25 @@ p {
 }
 
 .abstract {
-    max-width: 790px;
+    max-width: 780px;
 
-    margin-bottom: 0;
+    margin-top: 0;
 
-    color: #292929;
+    font-family:
+        "Avenir Next",
+        Avenir,
+        "Helvetica Neue",
+        Helvetica,
+        Arial,
+        sans-serif;
 
     font-size: 17px;
     font-weight: 400;
-    line-height: 1.62;
+    line-height: 1.58;
+
+    letter-spacing: -0.004em;
+
+    color: #292929;
 }
 
 
@@ -483,14 +494,16 @@ p {
    EMPHASIS
    ========================================================= */
 
+em,
+i,
+strong,
+b {
+    font-family: inherit;
+}
+
 strong,
 b {
     font-weight: 600;
-}
-
-em,
-i {
-    font-style: italic;
 }
 
 
@@ -499,20 +512,26 @@ i {
    ========================================================= */
 
 footer {
-    width: 100%;
     max-width: 870px;
 
-    margin: 25px auto 0;
-
+    margin: 30px auto 0;
     padding: 0 24px 30px;
 }
 
 .footer-content {
-    padding-top: 23px;
+    padding-top: 25px;
 
     border-top: 1px solid #eeeeee;
 
     color: #999999;
+
+    font-family:
+        "Avenir Next",
+        Avenir,
+        "Helvetica Neue",
+        Helvetica,
+        Arial,
+        sans-serif;
 
     font-size: 12px;
     font-weight: 400;
@@ -521,7 +540,7 @@ footer {
 
 
 /* =========================================================
-   FONT CONSISTENCY
+   FONT SAFETY OVERRIDE
    ========================================================= */
 
 body,
@@ -530,10 +549,26 @@ input,
 textarea,
 select,
 p,
-a,
 span,
 li,
-div {
+a,
+.bio,
+.position,
+.affiliation,
+.research-interests,
+.education-entry,
+.education-entry span,
+.institution,
+.degree,
+.date,
+.paper,
+.paper-title,
+.paper-links,
+.paper .abstract,
+.abstract,
+.primary-links,
+footer,
+.footer-content {
     font-family:
         "Avenir Next",
         Avenir,
@@ -545,27 +580,6 @@ div {
 
 
 /* =========================================================
-   TABLET
-   ========================================================= */
-
-@media (max-width: 760px) {
-
-    .container {
-        padding-top: 60px;
-    }
-
-    .hero {
-        gap: 45px;
-    }
-
-    .profile-photo {
-        width: 165px;
-        height: 200px;
-    }
-}
-
-
-/* =========================================================
    MOBILE
    ========================================================= */
 
@@ -573,60 +587,45 @@ div {
 
     body {
         font-size: 16px;
+        line-height: 1.6;
     }
 
-
-    /* Navigation */
-
     .nav {
-        padding: 18px 20px 16px;
+        padding: 20px 20px;
     }
 
     .site-name {
-        font-size: 16px;
+        font-size: 17px;
     }
 
     .nav-links {
-        gap: 20px;
+        gap: 22px;
     }
 
     .nav-links a {
         font-size: 13px;
     }
 
-
-    /* Main */
-
     .container {
-        padding: 48px 20px 40px;
+        padding: 50px 20px 40px;
     }
-
-
-    /* Hero */
 
     .hero {
         flex-direction: column-reverse;
         align-items: flex-start;
 
-        gap: 33px;
+        gap: 35px;
 
-        margin-bottom: 58px;
+        margin-bottom: 60px;
     }
 
     .hero-content {
         max-width: 100%;
     }
 
-    .profile-photo {
-        width: 145px;
-        height: 175px;
-    }
-
-
-    /* Typography */
-
     h1 {
         font-size: 34px;
+        line-height: 1.15;
 
         letter-spacing: -0.03em;
     }
@@ -652,20 +651,13 @@ div {
         font-size: 16px;
     }
 
-
-    /* Sections */
-
-    .section {
-        margin-top: 52px;
+    .profile-photo {
+        width: 145px;
+        height: 175px;
     }
-
-
-    /* Education */
 
     .education-entry {
         display: block;
-
-        margin-bottom: 23px;
     }
 
     .date {
@@ -674,23 +666,19 @@ div {
         font-size: 15px;
     }
 
-
-    /* Research */
-
-    .page-header {
-        margin-bottom: 40px;
+    .section {
+        margin-top: 55px;
     }
 
     .paper {
-        margin-bottom: 45px;
+        margin-bottom: 42px;
     }
 
-    .paper-links {
-        gap: 13px;
+    .abstract,
+    .bio,
+    .research-interests {
+        line-height: 1.6;
     }
-
-
-    /* Footer */
 
     footer {
         padding-left: 20px;
