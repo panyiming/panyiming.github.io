@@ -16,10 +16,19 @@ body {
     background: #ffffff;
     color: #272727;
 
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family:
+        "Avenir Next",
+        Avenir,
+        "Helvetica Neue",
+        Helvetica,
+        Arial,
+        sans-serif;
+
     font-size: 17px;
     font-weight: 400;
-    line-height: 1.7;
+    line-height: 1.6;
+
+    letter-spacing: -0.004em;
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -44,7 +53,13 @@ body {
     justify-content: space-between;
     align-items: center;
 
-    font-family: "Inter", sans-serif;
+    font-family:
+        "Avenir Next",
+        Avenir,
+        "Helvetica Neue",
+        Helvetica,
+        Arial,
+        sans-serif;
 }
 
 .site-name {
@@ -52,6 +67,8 @@ body {
 
     font-size: 18px;
     font-weight: 600;
+
+    letter-spacing: -0.015em;
 
     text-decoration: none;
 }
@@ -67,6 +84,8 @@ body {
     font-size: 14px;
     font-weight: 500;
 
+    letter-spacing: 0;
+
     text-decoration: none;
 
     transition: color 0.15s ease;
@@ -79,7 +98,7 @@ body {
 
 
 /* =========================================================
-   MAIN
+   MAIN CONTAINER
    ========================================================= */
 
 .container {
@@ -94,17 +113,24 @@ body {
    TYPOGRAPHY
    ========================================================= */
 
-/* Headings retain the current Inter style */
-
 h1,
 h2,
 h3 {
-    font-family: "Inter", sans-serif;
-    color: #171717;
+    margin-top: 0;
+
+    font-family:
+        "Avenir Next",
+        Avenir,
+        "Helvetica Neue",
+        Helvetica,
+        Arial,
+        sans-serif;
+
+    color: #181818;
 }
 
 h1 {
-    margin: 0 0 12px;
+    margin-bottom: 12px;
 
     font-size: 42px;
     font-weight: 600;
@@ -114,25 +140,35 @@ h1 {
 }
 
 h2 {
-    margin: 0 0 24px;
+    margin-bottom: 24px;
 
-    font-size: 21px;
+    font-size: 22px;
     font-weight: 600;
     line-height: 1.3;
 
-    letter-spacing: -0.015em;
+    letter-spacing: -0.02em;
 }
 
 h3 {
+    margin-bottom: 8px;
+
     font-size: 19px;
     font-weight: 600;
     line-height: 1.35;
+
+    letter-spacing: -0.012em;
 }
 
 p {
     margin-top: 0;
 
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family:
+        "Avenir Next",
+        Avenir,
+        "Helvetica Neue",
+        Helvetica,
+        Arial,
+        sans-serif;
 }
 
 
@@ -158,10 +194,17 @@ p {
 .position {
     margin: 0;
 
-    font-family: "Inter", sans-serif;
+    font-family:
+        "Avenir Next",
+        Avenir,
+        "Helvetica Neue",
+        Helvetica,
+        Arial,
+        sans-serif;
 
     font-size: 18px;
     font-weight: 500;
+    line-height: 1.45;
 
     color: #333333;
 }
@@ -169,7 +212,17 @@ p {
 .affiliation {
     margin-top: 3px;
 
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family:
+        "Avenir Next",
+        Avenir,
+        "Helvetica Neue",
+        Helvetica,
+        Arial,
+        sans-serif;
+
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.5;
 
     color: #555555;
 }
@@ -180,7 +233,19 @@ p {
     margin-top: 25px;
     margin-bottom: 0;
 
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family:
+        "Avenir Next",
+        Avenir,
+        "Helvetica Neue",
+        Helvetica,
+        Arial,
+        sans-serif;
+
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.6;
+
+    letter-spacing: -0.004em;
 }
 
 
@@ -202,14 +267,26 @@ p {
    LINKS
    ========================================================= */
 
+a {
+    color: #174a7e;
+}
+
 .primary-links {
     display: flex;
     gap: 24px;
 
     margin-top: 30px;
 
-    font-family: "Inter", sans-serif;
+    font-family:
+        "Avenir Next",
+        Avenir,
+        "Helvetica Neue",
+        Helvetica,
+        Arial,
+        sans-serif;
+
     font-size: 14px;
+    font-weight: 500;
 }
 
 .primary-links a {
@@ -218,9 +295,15 @@ p {
     text-decoration: none;
 
     border-bottom: 1px solid #b8cadb;
+
+    transition:
+        color 0.15s ease,
+        border-color 0.15s ease;
 }
 
 .primary-links a:hover {
+    color: #103b67;
+
     border-bottom-color: #174a7e;
 }
 
@@ -234,8 +317,19 @@ p {
 }
 
 .research-interests {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family:
+        "Avenir Next",
+        Avenir,
+        "Helvetica Neue",
+        Helvetica,
+        Arial,
+        sans-serif;
+
     font-size: 17px;
+    font-weight: 400;
+    line-height: 1.6;
+
+    letter-spacing: -0.004em;
 }
 
 
@@ -247,21 +341,48 @@ p {
     display: flex;
 
     justify-content: space-between;
+    align-items: flex-start;
 
     gap: 30px;
 
     margin-bottom: 24px;
 
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family:
+        "Avenir Next",
+        Avenir,
+        "Helvetica Neue",
+        Helvetica,
+        Arial,
+        sans-serif;
+
+    font-size: 17px;
+    line-height: 1.55;
 }
 
 .institution {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family:
+        "Avenir Next",
+        Avenir,
+        "Helvetica Neue",
+        Helvetica,
+        Arial,
+        sans-serif;
+
     font-weight: 600;
+
+    color: #242424;
 }
 
 .degree {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family:
+        "Avenir Next",
+        Avenir,
+        "Helvetica Neue",
+        Helvetica,
+        Arial,
+        sans-serif;
+
+    font-weight: 400;
 
     color: #555555;
 }
@@ -269,7 +390,16 @@ p {
 .date {
     white-space: nowrap;
 
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family:
+        "Avenir Next",
+        Avenir,
+        "Helvetica Neue",
+        Helvetica,
+        Arial,
+        sans-serif;
+
+    font-size: 16px;
+    font-weight: 400;
 
     color: #666666;
 }
@@ -282,20 +412,49 @@ p {
 .paper {
     margin-bottom: 50px;
 
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family:
+        "Avenir Next",
+        Avenir,
+        "Helvetica Neue",
+        Helvetica,
+        Arial,
+        sans-serif;
 }
 
 .paper-title {
+    margin-top: 0;
     margin-bottom: 7px;
 
-    font-family: "Inter", sans-serif;
+    font-family:
+        "Avenir Next",
+        Avenir,
+        "Helvetica Neue",
+        Helvetica,
+        Arial,
+        sans-serif;
+
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 1.4;
+
+    letter-spacing: -0.012em;
+
+    color: #181818;
 }
 
 .paper-links {
     margin: 0 0 15px;
 
-    font-family: "Inter", sans-serif;
+    font-family:
+        "Avenir Next",
+        Avenir,
+        "Helvetica Neue",
+        Helvetica,
+        Arial,
+        sans-serif;
+
     font-size: 14px;
+    font-weight: 500;
 }
 
 .paper-links a {
@@ -311,21 +470,29 @@ p {
 .abstract {
     max-width: 780px;
 
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin-top: 0;
+
+    font-family:
+        "Avenir Next",
+        Avenir,
+        "Helvetica Neue",
+        Helvetica,
+        Arial,
+        sans-serif;
+
     font-size: 17px;
     font-weight: 400;
-    line-height: 1.7;
+    line-height: 1.58;
+
+    letter-spacing: -0.004em;
+
+    color: #292929;
 }
 
 
 /* =========================================================
    EMPHASIS
    ========================================================= */
-
-/*
-   Italics and bold text inherit the surrounding
-   Helvetica-style body font.
-*/
 
 em,
 i,
@@ -358,32 +525,65 @@ footer {
 
     color: #999999;
 
-    font-family: "Inter", sans-serif;
+    font-family:
+        "Avenir Next",
+        Avenir,
+        "Helvetica Neue",
+        Helvetica,
+        Arial,
+        sans-serif;
+
     font-size: 12px;
+    font-weight: 400;
+    line-height: 1.5;
 }
 
 
 /* =========================================================
-   BODY FONT SAFETY OVERRIDE
+   FONT SAFETY OVERRIDE
    ========================================================= */
 
 /*
-   This prevents old Source Serif / Georgia declarations
-   from being inherited by the site's main text.
+   Force all important text elements to use the same
+   Avenir-style font family.
+
+   This prevents old Inter, Source Serif, Georgia,
+   or other font declarations from surviving elsewhere.
 */
 
-body p,
+body,
+button,
+input,
+textarea,
+select,
+p,
+span,
+li,
+a,
 .bio,
+.position,
 .affiliation,
 .research-interests,
 .education-entry,
 .education-entry span,
+.institution,
 .degree,
 .date,
 .paper,
+.paper-title,
+.paper-links,
 .paper .abstract,
-.abstract {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+.abstract,
+.primary-links,
+footer,
+.footer-content {
+    font-family:
+        "Avenir Next",
+        Avenir,
+        "Helvetica Neue",
+        Helvetica,
+        Arial,
+        sans-serif;
 }
 
 
@@ -393,8 +593,29 @@ body p,
 
 @media (max-width: 650px) {
 
+    body {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .nav {
+        padding: 20px 20px;
+    }
+
+    .site-name {
+        font-size: 17px;
+    }
+
+    .nav-links {
+        gap: 22px;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+    }
+
     .container {
-        padding-top: 50px;
+        padding: 50px 20px 40px;
     }
 
     .hero {
@@ -406,8 +627,36 @@ body p,
         margin-bottom: 60px;
     }
 
+    .hero-content {
+        max-width: 100%;
+    }
+
     h1 {
         font-size: 34px;
+        line-height: 1.15;
+
+        letter-spacing: -0.03em;
+    }
+
+    h2 {
+        font-size: 21px;
+    }
+
+    h3,
+    .paper-title {
+        font-size: 18px;
+    }
+
+    .position {
+        font-size: 17px;
+    }
+
+    .bio,
+    .affiliation,
+    .research-interests,
+    .abstract,
+    .education-entry {
+        font-size: 16px;
     }
 
     .profile-photo {
@@ -421,5 +670,26 @@ body p,
 
     .date {
         margin-top: 4px;
+
+        font-size: 15px;
+    }
+
+    .section {
+        margin-top: 55px;
+    }
+
+    .paper {
+        margin-bottom: 42px;
+    }
+
+    .abstract,
+    .bio,
+    .research-interests {
+        line-height: 1.6;
+    }
+
+    footer {
+        padding-left: 20px;
+        padding-right: 20px;
     }
 }
