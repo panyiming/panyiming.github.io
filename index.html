@@ -1,131 +1,699 @@
-<!DOCTYPE html>
-<html lang="en">
+/* =========================================================
+   RESET / BASE
+   ========================================================= */
 
-<head>
+* {
+    box-sizing: border-box;
+}
 
-    <meta charset="UTF-8">
+html {
+    scroll-behavior: smooth;
+}
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+body {
+    margin: 0;
 
-    <title>Pan Yiming | Finance</title>
+    background: #ffffff;
+    color: #292929;
 
-    <meta name="description"
-          content="Pan Yiming — PhD Candidate in Finance at the Vienna Graduate School of Finance.">
+    font-family:
+        "Avenir Next",
+        Avenir,
+        "Helvetica Neue",
+        Helvetica,
+        Arial,
+        sans-serif;
 
-    <link rel="preconnect"
-          href="https://fonts.googleapis.com">
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.62;
 
-    <link rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossorigin>
+    letter-spacing: -0.003em;
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:wght@400;500&display=swap"
-        rel="stylesheet">
-
-    <link rel="stylesheet"
-          href="/css/main.css">
-
-</head>
-
-
-<body>
-
-<header class="site-header">
-
-    <nav class="nav">
-
-        <a class="site-name" href="/">
-            Pan Yiming
-        </a>
-
-        <div class="nav-links">
-            <a class="active" href="/">Home</a>
-            <a href="/research.html">Research</a>
-        </div>
-
-    </nav>
-
-</header>
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
 
 
-<main class="container">
+/* =========================================================
+   LINKS
+   ========================================================= */
 
-    <section class="hero">
+a {
+    color: #174a7e;
+}
 
-        <div class="hero-content">
-
-            <h1>Pan Yiming</h1>
-
-            <p class="position">
-                PhD Candidate in Finance
-            </p>
-
-            <p class="affiliation">
-                Vienna Graduate School of Finance
-            </p>
+a:hover {
+    color: #103b67;
+}
 
 
-            <p class="bio">
-                I am a PhD candidate in Finance at the Vienna Graduate
-                School of Finance and will be on the 2026–2027 academic
-                job market.
-            </p>
+/* =========================================================
+   HEADER / NAVIGATION
+   ========================================================= */
+
+.site-header {
+    width: 100%;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid #ededed;
+}
+
+.nav {
+    width: 100%;
+    max-width: 920px;
+
+    margin: 0 auto;
+    padding: 20px 24px 18px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
 
-            <p class="bio">
-                My research interests are empirical asset pricing,
-                with a focus on trading frictions, market structure,
-                and return predictability.
-            </p>
+/* Name */
+
+.site-name {
+    color: #222222;
+
+    font-size: 17px;
+    font-weight: 500;
+
+    letter-spacing: -0.012em;
+
+    text-decoration: none;
+
+    transition: color 0.15s ease;
+}
+
+.site-name:hover {
+    color: #000000;
+}
 
 
-            <div class="primary-links">
+/* Menu */
 
-                <a href="/files/PanYiming_VGSF_CV.pdf">
-                    CV
-                </a>
+.nav-links {
+    display: flex;
+    align-items: center;
 
-                <a href="mailto:panyiming1993@gmail.com">
-                    Email
-                </a>
+    gap: 28px;
+}
 
-                <a href="https://github.com/panyiming"
-                   target="_blank"
-                   rel="noopener noreferrer">
-                    GitHub
-                </a>
+.nav-links a {
+    position: relative;
 
-            </div>
+    padding: 2px 0;
 
-        </div>
+    color: #666666;
+
+    font-size: 14px;
+    font-weight: 400;
+
+    letter-spacing: 0;
+
+    text-decoration: none;
+
+    transition: color 0.15s ease;
+}
+
+.nav-links a:hover {
+    color: #111111;
+}
+
+.nav-links .active {
+    color: #111111;
+
+    font-weight: 500;
+}
+
+.nav-links .active::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+
+    bottom: -5px;
+
+    height: 1px;
+
+    background: #444444;
+}
 
 
-        <!-- Add your photo here later
+/* =========================================================
+   MAIN CONTAINER
+   ========================================================= */
 
-        <img
-            src="/images/photo.jpg"
-            alt="Pan Yiming"
-            class="profile-photo"
-        >
+.container {
+    width: 100%;
+    max-width: 870px;
 
-        -->
+    margin: 0 auto;
 
-    </section>
-
-</main>
-
-
-<footer>
-
-    <div class="footer-content">
-        © 2026 Pan Yiming
-    </div>
-
-</footer>
+    padding: 78px 24px 55px;
+}
 
 
-</body>
+/* =========================================================
+   TYPOGRAPHY
+   ========================================================= */
 
-</html>
+h1,
+h2,
+h3 {
+    margin-top: 0;
+
+    color: #191919;
+
+    font-family:
+        "Avenir Next",
+        Avenir,
+        "Helvetica Neue",
+        Helvetica,
+        Arial,
+        sans-serif;
+}
+
+h1 {
+    margin-bottom: 12px;
+
+    font-size: 42px;
+    font-weight: 600;
+    line-height: 1.14;
+
+    letter-spacing: -0.035em;
+}
+
+h2 {
+    margin-bottom: 23px;
+
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.3;
+
+    letter-spacing: -0.022em;
+}
+
+h3 {
+    margin-bottom: 8px;
+
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 1.4;
+
+    letter-spacing: -0.012em;
+}
+
+p {
+    margin-top: 0;
+}
+
+
+/* =========================================================
+   HOME — HERO
+   ========================================================= */
+
+.hero {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 65px;
+
+    margin-bottom: 78px;
+}
+
+.hero-content {
+    flex: 1;
+
+    max-width: 610px;
+}
+
+.position {
+    margin: 0;
+
+    color: #333333;
+
+    font-size: 18px;
+    font-weight: 500;
+
+    line-height: 1.45;
+}
+
+.affiliation {
+    margin-top: 3px;
+    margin-bottom: 0;
+
+    color: #555555;
+
+    font-size: 17px;
+    font-weight: 400;
+
+    line-height: 1.5;
+}
+
+.bio {
+    max-width: 620px;
+
+    margin-top: 26px;
+    margin-bottom: 0;
+
+    font-size: 17px;
+    line-height: 1.62;
+
+    color: #292929;
+}
+
+
+/* =========================================================
+   PROFILE PHOTO
+   ========================================================= */
+
+.profile-photo {
+    width: 185px;
+    height: 220px;
+
+    flex-shrink: 0;
+
+    object-fit: cover;
+
+    border-radius: 3px;
+}
+
+
+/* =========================================================
+   PRIMARY LINKS
+   ========================================================= */
+
+.primary-links {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 22px;
+
+    margin-top: 29px;
+
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.primary-links a {
+    color: #174a7e;
+
+    text-decoration: none;
+
+    border-bottom: 1px solid #b9c9d8;
+
+    transition:
+        color 0.15s ease,
+        border-color 0.15s ease;
+}
+
+.primary-links a:hover {
+    color: #103b67;
+
+    border-bottom-color: #174a7e;
+}
+
+
+/* =========================================================
+   GENERAL SECTIONS
+   ========================================================= */
+
+.section {
+    margin-top: 64px;
+}
+
+.section:first-of-type {
+    margin-top: 0;
+}
+
+.research-interests {
+    max-width: 760px;
+
+    margin-bottom: 0;
+
+    font-size: 17px;
+    line-height: 1.62;
+}
+
+
+/* =========================================================
+   EDUCATION
+   ========================================================= */
+
+.education-entry {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: flex-start;
+
+    gap: 35px;
+
+    margin-bottom: 24px;
+
+    font-size: 17px;
+    line-height: 1.55;
+}
+
+.education-entry:last-child {
+    margin-bottom: 0;
+}
+
+.education-info {
+    flex: 1;
+}
+
+.institution {
+    color: #242424;
+
+    font-weight: 600;
+}
+
+.degree {
+    margin-top: 2px;
+
+    color: #555555;
+
+    font-weight: 400;
+}
+
+.date {
+    flex-shrink: 0;
+
+    white-space: nowrap;
+
+    color: #6a6a6a;
+
+    font-size: 16px;
+    font-weight: 400;
+}
+
+
+/* =========================================================
+   RESEARCH PAGE HEADER
+   ========================================================= */
+
+.page-header {
+    margin-bottom: 52px;
+}
+
+.page-header h1 {
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   PAPER
+   ========================================================= */
+
+.paper {
+    max-width: 800px;
+
+    margin-bottom: 55px;
+}
+
+.paper:last-child {
+    margin-bottom: 0;
+}
+
+.paper-title {
+    margin: 0 0 7px;
+
+    color: #191919;
+
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 1.42;
+
+    letter-spacing: -0.012em;
+}
+
+.paper-status {
+    margin: 0 0 7px;
+
+    color: #666666;
+
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.paper-links {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 16px;
+
+    margin: 0 0 17px;
+
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.paper-links a {
+    color: #174a7e;
+
+    text-decoration: none;
+}
+
+.paper-links a:hover {
+    text-decoration: underline;
+}
+
+.abstract {
+    max-width: 790px;
+
+    margin-bottom: 0;
+
+    color: #292929;
+
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.62;
+}
+
+
+/* =========================================================
+   EMPHASIS
+   ========================================================= */
+
+strong,
+b {
+    font-weight: 600;
+}
+
+em,
+i {
+    font-style: italic;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer {
+    width: 100%;
+    max-width: 870px;
+
+    margin: 25px auto 0;
+
+    padding: 0 24px 30px;
+}
+
+.footer-content {
+    padding-top: 23px;
+
+    border-top: 1px solid #eeeeee;
+
+    color: #999999;
+
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   FONT CONSISTENCY
+   ========================================================= */
+
+body,
+button,
+input,
+textarea,
+select,
+p,
+a,
+span,
+li,
+div {
+    font-family:
+        "Avenir Next",
+        Avenir,
+        "Helvetica Neue",
+        Helvetica,
+        Arial,
+        sans-serif;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 760px) {
+
+    .container {
+        padding-top: 60px;
+    }
+
+    .hero {
+        gap: 45px;
+    }
+
+    .profile-photo {
+        width: 165px;
+        height: 200px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 650px) {
+
+    body {
+        font-size: 16px;
+    }
+
+
+    /* Navigation */
+
+    .nav {
+        padding: 18px 20px 16px;
+    }
+
+    .site-name {
+        font-size: 16px;
+    }
+
+    .nav-links {
+        gap: 20px;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+    }
+
+
+    /* Main */
+
+    .container {
+        padding: 48px 20px 40px;
+    }
+
+
+    /* Hero */
+
+    .hero {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+
+        gap: 33px;
+
+        margin-bottom: 58px;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .profile-photo {
+        width: 145px;
+        height: 175px;
+    }
+
+
+    /* Typography */
+
+    h1 {
+        font-size: 34px;
+
+        letter-spacing: -0.03em;
+    }
+
+    h2 {
+        font-size: 21px;
+    }
+
+    h3,
+    .paper-title {
+        font-size: 18px;
+    }
+
+    .position {
+        font-size: 17px;
+    }
+
+    .bio,
+    .affiliation,
+    .research-interests,
+    .abstract,
+    .education-entry {
+        font-size: 16px;
+    }
+
+
+    /* Sections */
+
+    .section {
+        margin-top: 52px;
+    }
+
+
+    /* Education */
+
+    .education-entry {
+        display: block;
+
+        margin-bottom: 23px;
+    }
+
+    .date {
+        margin-top: 4px;
+
+        font-size: 15px;
+    }
+
+
+    /* Research */
+
+    .page-header {
+        margin-bottom: 40px;
+    }
+
+    .paper {
+        margin-bottom: 45px;
+    }
+
+    .paper-links {
+        gap: 13px;
+    }
+
+
+    /* Footer */
+
+    footer {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
