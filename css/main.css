@@ -502,7 +502,7 @@ a {
     max-width: 100%;
 
     text-align: justify !important;
-    text-align-last: left;
+    text-align-last: justify;
 
     hyphens: none !important;
     -webkit-hyphens: none !important;
