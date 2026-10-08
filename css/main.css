@@ -493,23 +493,23 @@ a {
     text-decoration: underline;
 }
 
+/* =========================================================
+   FORCE JUSTIFIED ABSTRACT
+   ========================================================= */
+
 .abstract {
-    max-width: 780px;
+    width: 100%;
+    max-width: 100%;
 
-    font-size: 17px;
-    line-height: 1.58;
-
-    /* align both left and right edges automatically */
-    text-align: justify;
+    text-align: justify !important;
     text-align-last: left;
 
-    /* never split words with hyphens */
-    hyphens: none;
-    -webkit-hyphens: none;
+    hyphens: none !important;
+    -webkit-hyphens: none !important;
 
-    word-break: normal;
-    overflow-wrap: normal;
-    white-space: normal;
+    word-break: normal !important;
+    overflow-wrap: normal !important;
+    white-space: normal !important;
 }
 
 
