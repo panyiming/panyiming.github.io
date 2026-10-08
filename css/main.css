@@ -499,14 +499,16 @@ a {
     font-size: 17px;
     line-height: 1.58;
 
-    text-align: left;
+    /* align both left and right edges automatically */
+    text-align: justify;
+    text-align-last: left;
 
+    /* never split words with hyphens */
     hyphens: none;
     -webkit-hyphens: none;
 
     word-break: normal;
     overflow-wrap: normal;
-
     white-space: normal;
 }
 
