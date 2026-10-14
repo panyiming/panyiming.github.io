@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
+/* Jost loads online. No local font files or fonts folder are needed. */
+:root {
+    --site-font: "Jost", "Avenir Next", Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
 /* =========================================================
    BASE
    ========================================================= */
@@ -138,13 +145,7 @@ h2,
 h3 {
     margin-top: 0;
 
-    font-family:
-        "Avenir Next",
-        Avenir,
-        "Helvetica Neue",
-        Helvetica,
-        Arial,
-        sans-serif;
+    font-family: var(--site-font);
 
     color: #181818;
 }
@@ -182,13 +183,7 @@ h3 {
 p {
     margin-top: 0;
 
-    font-family:
-        "Avenir Next",
-        Avenir,
-        "Helvetica Neue",
-        Helvetica,
-        Arial,
-        sans-serif;
+    font-family: var(--site-font);
 }
 
 
@@ -214,13 +209,7 @@ p {
 .position {
     margin: 0;
 
-    font-family:
-        "Avenir Next",
-        Avenir,
-        "Helvetica Neue",
-        Helvetica,
-        Arial,
-        sans-serif;
+    font-family: var(--site-font);
 
     font-size: 18px;
     font-weight: 500;
@@ -232,13 +221,7 @@ p {
 .affiliation {
     margin-top: 3px;
 
-    font-family:
-        "Avenir Next",
-        Avenir,
-        "Helvetica Neue",
-        Helvetica,
-        Arial,
-        sans-serif;
+    font-family: var(--site-font);
 
     font-size: 17px;
     font-weight: 400;
@@ -253,13 +236,7 @@ p {
     margin-top: 25px;
     margin-bottom: 0;
 
-    font-family:
-        "Avenir Next",
-        Avenir,
-        "Helvetica Neue",
-        Helvetica,
-        Arial,
-        sans-serif;
+    font-family: var(--site-font);
 
     font-size: 17px;
     font-weight: 400;
@@ -297,13 +274,7 @@ a {
 
     margin-top: 30px;
 
-    font-family:
-        "Avenir Next",
-        Avenir,
-        "Helvetica Neue",
-        Helvetica,
-        Arial,
-        sans-serif;
+    font-family: var(--site-font);
 
     font-size: 14px;
     font-weight: 500;
@@ -337,13 +308,7 @@ a {
 }
 
 .research-interests {
-    font-family:
-        "Avenir Next",
-        Avenir,
-        "Helvetica Neue",
-        Helvetica,
-        Arial,
-        sans-serif;
+    font-family: var(--site-font);
 
     font-size: 17px;
     font-weight: 400;
@@ -367,26 +332,14 @@ a {
 
     margin-bottom: 24px;
 
-    font-family:
-        "Avenir Next",
-        Avenir,
-        "Helvetica Neue",
-        Helvetica,
-        Arial,
-        sans-serif;
+    font-family: var(--site-font);
 
     font-size: 17px;
     line-height: 1.55;
 }
 
 .institution {
-    font-family:
-        "Avenir Next",
-        Avenir,
-        "Helvetica Neue",
-        Helvetica,
-        Arial,
-        sans-serif;
+    font-family: var(--site-font);
 
     font-weight: 600;
 
@@ -394,13 +347,7 @@ a {
 }
 
 .degree {
-    font-family:
-        "Avenir Next",
-        Avenir,
-        "Helvetica Neue",
-        Helvetica,
-        Arial,
-        sans-serif;
+    font-family: var(--site-font);
 
     font-weight: 400;
 
@@ -410,13 +357,7 @@ a {
 .date {
     white-space: nowrap;
 
-    font-family:
-        "Avenir Next",
-        Avenir,
-        "Helvetica Neue",
-        Helvetica,
-        Arial,
-        sans-serif;
+    font-family: var(--site-font);
 
     font-size: 16px;
     font-weight: 400;
@@ -432,26 +373,14 @@ a {
 .paper {
     margin-bottom: 50px;
 
-    font-family:
-        "Avenir Next",
-        Avenir,
-        "Helvetica Neue",
-        Helvetica,
-        Arial,
-        sans-serif;
+    font-family: var(--site-font);
 }
 
 .paper-title {
     margin-top: 0;
     margin-bottom: 7px;
 
-    font-family:
-        "Avenir Next",
-        Avenir,
-        "Helvetica Neue",
-        Helvetica,
-        Arial,
-        sans-serif;
+    font-family: var(--site-font);
 
     font-size: 19px;
     font-weight: 600;
@@ -465,13 +394,7 @@ a {
 .paper-links {
     margin: 0 0 15px;
 
-    font-family:
-        "Avenir Next",
-        Avenir,
-        "Helvetica Neue",
-        Helvetica,
-        Arial,
-        sans-serif;
+    font-family: var(--site-font);
 
     font-size: 14px;
     font-weight: 500;
@@ -542,13 +465,7 @@ footer {
 
     color: #999999;
 
-    font-family:
-        "Avenir Next",
-        Avenir,
-        "Helvetica Neue",
-        Helvetica,
-        Arial,
-        sans-serif;
+    font-family: var(--site-font);
 
     font-size: 12px;
     font-weight: 400;
@@ -586,13 +503,7 @@ a,
 .primary-links,
 footer,
 .footer-content {
-    font-family:
-        "Avenir Next",
-        Avenir,
-        "Helvetica Neue",
-        Helvetica,
-        Arial,
-        sans-serif;
+    font-family: var(--site-font);
 }
 
 
@@ -702,3 +613,4 @@ footer,
         padding-right: 20px;
     }
 }
+
