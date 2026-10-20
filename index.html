@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,12 +28,91 @@
     <link rel="stylesheet"
           href="/css/main.css">
 
+    <style>
+
+        /* ==========================================
+           HERO LAYOUT
+           No changes to font settings
+           ========================================== */
+
+        .hero {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) 280px;
+            align-items: start;
+            gap: 64px;
+        }
+
+        .hero-content {
+            min-width: 0;
+        }
+
+        /* ==========================================
+           PROFILE PHOTO
+           ========================================== */
+
+        .hero-photo {
+            width: 100%;
+            max-width: 280px;
+        }
+
+        .profile-photo {
+            display: block;
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 6px;
+        }
+
+        /* ==========================================
+           VGSF LOGO
+           ========================================== */
+
+        .vgsf-logo-link {
+            display: inline-block;
+            margin-top: 14px;
+            margin-bottom: 22px;
+        }
+
+        .vgsf-logo {
+            display: block;
+            width: 155px;
+            max-width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+
+        /* ==========================================
+           MOBILE
+           ========================================== */
+
+        @media (max-width: 768px) {
+
+            .hero {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .hero-photo {
+                max-width: 220px;
+                grid-row: 1;
+            }
+
+            .hero-content {
+                grid-row: 2;
+            }
+
+        }
+
+    </style>
+
 </head>
 
 
 <body>
 
 <header class="site-header">
+
     <nav class="nav">
 
         <a class="site-name" href="/">
@@ -45,6 +125,7 @@
         </div>
 
     </nav>
+
 </header>
 
 
@@ -63,6 +144,21 @@
             <p class="affiliation">
                 Vienna Graduate School of Finance
             </p>
+
+            <!-- VGSF Logo -->
+
+            <a href="https://www.vgsf.ac.at/"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="vgsf-logo-link">
+
+                <img
+                    src="/images/vgsf.jpg"
+                    alt="Vienna Graduate School of Finance"
+                    class="vgsf-logo"
+                >
+
+            </a>
 
 
             <p class="bio">
@@ -100,15 +196,17 @@
         </div>
 
 
-        <!-- Add your photo here later
+        <!-- Profile Photo -->
 
-        <img
-            src="/images/photo.jpg"
-            alt="Pan Yiming"
-            class="profile-photo"
-        >
+        <div class="hero-photo">
 
-        -->
+            <img
+                src="/images/pan_phtoto_web.png"
+                alt="Pan Yiming"
+                class="profile-photo"
+            >
+
+        </div>
 
     </section>
 
