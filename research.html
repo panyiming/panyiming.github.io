@@ -53,67 +53,88 @@
     <h1>Research</h1>
 
 
-    <!-- ==========================================
-         JOB MARKET PAPER
-         ========================================== -->
+<!-- ==========================================
+     JOB MARKET PAPER
+     ========================================== -->
+<section class="section">
 
-    <section class="section">
+  <h2>Job Market Paper</h2>
 
-        <h2>Job Market Paper</h2>
+  <article class="paper">
 
+    <h3 class="paper-title">
+      Lendable Inventory Concentration, Recall Risk, and Equity Pricing Anomalies
+      <span style="font-weight: normal;">(sole-authored)</span>
+    </h3>
 
-        <article class="paper">
+    <p class="paper-links">
+      <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6908098">SSRN</a>
+    </p>
 
-            <h3 class="paper-title">
-                Lendable Inventory Concentration, Recall Risk, and Equity Pricing Anomalies
-                <span style="font-weight: normal;">(sole-authored)</span>
-            </h3>
+    <p class="abstract">
+      A short seller needs borrowed shares until the mispricing corrects, but lenders can recall them at any time.
+      When lendable inventory concentration (IC) is high, meaning that a few large lenders hold most of the lendable shares,
+      one lender's withdrawal can recall more shares than borrowers can replace in time. Within firms,
+      a one-standard-deviation higher IC predicts a 2.1 percentage point higher next-month recall probability (mean 10.9%),
+      controlling for the fee and lendable supply. This recall risk deters short selling: the same overpricing signal implied
+      by anomalies attracts about one quarter as much short interest at the highest IC as at the lowest IC,
+      although unused shares are available. As a result, less of the overpricing is corrected: monthly anomaly spreads are
+      0.43% larger in the top than in the bottom IC quintile, mainly through the short leg, and remain 0.33% larger net of fees.
+      Russell 3000 inclusion, which broadens the lender base, lowers recall risk and raises short interest most in overpriced
+      stocks with high pre-inclusion IC. Beyond the fee, inventory concentration makes access to lendable shares less durable,
+      which deters short selling and sustains anomaly-related overpricing.
+    </p>
 
+    <h4>Key result</h4>
 
+    <p>
+      Each stock gets a NetLeg score: the number of anomalies that classify it as underpriced minus the number that
+      classify it as overpriced. A portfolio that buys the most underpriced quintile and shorts the most overpriced
+      quintile earns large returns only where IC is high, before and after fees.
+    </p>
 
-            <p class="paper-links">
+    <figure style="margin: 1em 0;">
+      <img src="/images/netleg_InventoryConcentration_mean_LS_log_raw.png"
+           alt="Cumulative NetLeg spread in the high- and low-IC groups, before and net of fees"
+           style="max-width: 100%; height: auto;">
+      <figcaption style="font-size: 0.85em; color: #555; margin-top: 0.4em;">
+        Cumulative log returns of the Q5 − Q1 NetLeg portfolio in the high- and low-IC groups, before fees (solid)
+        and net of fees (dashed). US stocks, 2006 to 2023.
+      </figcaption>
+    </figure>
 
-                <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6908098">
-                    SSRN
-                </a>
+    <div style="overflow-x: auto;">
+      <table style="border-collapse: collapse; font-size: 0.9em; margin: 0.5em 0;">
+        <thead>
+          <tr style="border-top: 1.5px solid #333; border-bottom: 1px solid #333;">
+            <th style="text-align: left; padding: 4px 12px 4px 0;">Q5 − Q1, basis points a month</th>
+            <th style="padding: 4px 12px;">Low IC</th>
+            <th style="padding: 4px 12px;">High IC</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="padding: 4px 12px 4px 0;">Before fees</td>
+            <td style="text-align: center; padding: 4px 12px;">31 (t = 0.8)</td>
+            <td style="text-align: center; padding: 4px 12px;"><b>122</b> (t = 2.7)</td>
+          </tr>
+          <tr>
+            <td style="padding: 4px 12px 4px 0;">Net of fees</td>
+            <td style="text-align: center; padding: 4px 12px;">27 (t = 0.7)</td>
+            <td style="text-align: center; padding: 4px 12px;"><b>100</b> (t = 2.2)</td>
+          </tr>
+          <tr style="border-bottom: 1.5px solid #333;">
+            <td style="padding: 4px 12px 4px 0;">DGTW-adjusted, net of fees</td>
+            <td style="text-align: center; padding: 4px 12px;">28 (t = 1.2)</td>
+            <td style="text-align: center; padding: 4px 12px;"><b>102</b> (t = 2.9)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
+  </article>
 
-            </p>
-
-
-<p class="abstract">
-A short seller needs borrowed shares until the mispricing corrects, but lenders can recall them at any time. 
-When lendable inventory concentration (IC) is high, meaning that a few large lenders hold most of the lendable shares, 
-one lender's withdrawal can recall more shares than borrowers can replace in time. Within firms, 
-a one-standard-deviation higher IC predicts a 2.1 percentage point higher next-month recall probability (mean 10.9%), 
-controlling for the fee and lendable supply. This recall risk deters short selling: the same overpricing signal implied
-by anomalies attracts about one quarter as much short interest at the highest IC as at the lowest IC,
-although unused shares are available. As a result, less of the overpricing is corrected: monthly anomaly spreads are
-0.43% larger in the top than in the bottom IC quintile, mainly through the short leg, and remain 0.33% larger net of fees. Russell 3000 inclusion, which broadens the lender base, lowers recall risk and raises short interest most in overpriced stocks with high pre-inclusion IC.
-Beyond the fee, inventory concentration makes access to lendable shares less durable, which deters short selling and sustains anomaly-related overpricing.
-</p>
-        </article>
-
-        ### Key result
-
-Each stock gets a NetLeg score: the number of anomalies that classify it as underpriced minus the number that classify it as overpriced. A portfolio that buys the most underpriced quintile and shorts the most overpriced quintile earns large returns only where inventory concentration (IC) is high.
-
-<img src="/images/netleg_InventoryConcentration_mean_LS_log_raw.png" alt="Cumulative NetLeg spread by IC group" style="max-width:100%;">
-
-<table>
-  <thead>
-    <tr><th>Q5 − Q1, basis points a month</th><th>Low IC</th><th>High IC</th></tr>
-  </thead>
-  <tbody>
-    <tr><td>Before fees</td><td>31 (t = 0.8)</td><td><b>122</b> (t = 2.7)</td></tr>
-    <tr><td>Net of fees</td><td>27 (t = 0.7)</td><td><b>100</b> (t = 2.2)</td></tr>
-    <tr><td>DGTW-adjusted, net of fees</td><td>28 (t = 1.2)</td><td><b>102</b> (t = 2.9)</td></tr>
-  </tbody>
-</table>
-
-<small>Cumulative log returns of the Q5 − Q1 NetLeg portfolio in the high- and low-IC groups, before fees (solid) and net of fees (dashed), US stocks, 2006 to 2023.</small>
-
-    </section>
+</section>
 
 <!-- Working Papers -->
 <section class="section">
