@@ -85,53 +85,52 @@
       which deters short selling and sustains anomaly-related overpricing.
     </p>
 
-    <h4>Key result</h4>
+<h4>Key result</h4>
 
-    <p>
-      Each stock gets a NetLeg score: the number of anomalies that classify it as underpriced minus the number that
-      classify it as overpriced. A portfolio that buys the most underpriced quintile and shorts the most overpriced
-      quintile earns large returns only where IC is high, before and after fees.
-    </p>
+<p>
+  Each stock gets a NetLeg score: the number of anomalies that classify it as underpriced minus the number that
+  classify it as overpriced. A portfolio that buys the most underpriced quintile and shorts the most overpriced
+  quintile earns large returns only where IC is high, before and after fees.
+</p>
 
-    <figure style="margin: 1em 0;">
-      <img src="/images/netleg_InventoryConcentration_mean_LS_log_raw.png"
-           alt="Cumulative NetLeg spread in the high- and low-IC groups, before and net of fees"
-           style="max-width: 100%; height: auto;">
-      <figcaption style="font-size: 0.85em; color: #555; margin-top: 0.4em;">
-        Cumulative log returns of the Q5 − Q1 NetLeg portfolio in the high- and low-IC groups, before fees (solid)
-        and net of fees (dashed). US stocks, 2006 to 2023.
-      </figcaption>
-    </figure>
+<figure style="margin: 1em 0; text-align: center;">
+  <img src="/images/netleg_InventoryConcentration_mean_LS_log_raw.png"
+       alt="Cumulative NetLeg spread in the high- and low-IC groups, before and net of fees"
+       style="max-width: 100%; height: auto;">
+  <figcaption style="font-size: 0.85em; color: #555; margin-top: 0.4em;">
+    Cumulative log returns of the Q5 − Q1 NetLeg portfolio in the high- and low-IC groups, before fees (solid)
+    and net of fees (dashed). US stocks, 2006 to 2023.
+  </figcaption>
+</figure>
 
-    <div style="overflow-x: auto;">
-      <table style="border-collapse: collapse; font-size: 0.9em; margin: 0.5em 0;">
-        <thead>
-          <tr style="border-top: 1.5px solid #333; border-bottom: 1px solid #333;">
-            <th style="text-align: left; padding: 4px 12px 4px 0;">Q5 − Q1, basis points a month</th>
-            <th style="padding: 4px 12px;">Low IC</th>
-            <th style="padding: 4px 12px;">High IC</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td style="padding: 4px 12px 4px 0;">Before fees</td>
-            <td style="text-align: center; padding: 4px 12px;">31 (t = 0.8)</td>
-            <td style="text-align: center; padding: 4px 12px;"><b>122</b> (t = 2.7)</td>
-          </tr>
-          <tr>
-            <td style="padding: 4px 12px 4px 0;">Net of fees</td>
-            <td style="text-align: center; padding: 4px 12px;">27 (t = 0.7)</td>
-            <td style="text-align: center; padding: 4px 12px;"><b>100</b> (t = 2.2)</td>
-          </tr>
-          <tr style="border-bottom: 1.5px solid #333;">
-            <td style="padding: 4px 12px 4px 0;">DGTW-adjusted, net of fees</td>
-            <td style="text-align: center; padding: 4px 12px;">28 (t = 1.2)</td>
-            <td style="text-align: center; padding: 4px 12px;"><b>102</b> (t = 2.9)</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
+<div style="overflow-x: auto;">
+  <table style="border-collapse: collapse; font-size: 0.9em; margin: 0.5em auto;">
+    <thead>
+      <tr style="border-top: 1.5px solid #333; border-bottom: 1px solid #333;">
+        <th style="text-align: left; padding: 4px 12px 4px 0;">Q5 − Q1, basis points a month</th>
+        <th style="padding: 4px 12px;">Low IC</th>
+        <th style="padding: 4px 12px;">High IC</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="padding: 4px 12px 4px 0;">Before fees</td>
+        <td style="text-align: center; padding: 4px 12px;">31 (t = 0.8)</td>
+        <td style="text-align: center; padding: 4px 12px;"><b>122</b> (t = 2.7)</td>
+      </tr>
+      <tr>
+        <td style="padding: 4px 12px 4px 0;">Net of fees</td>
+        <td style="text-align: center; padding: 4px 12px;">27 (t = 0.7)</td>
+        <td style="text-align: center; padding: 4px 12px;"><b>100</b> (t = 2.2)</td>
+      </tr>
+      <tr style="border-bottom: 1.5px solid #333;">
+        <td style="padding: 4px 12px 4px 0;">DGTW-adjusted, net of fees</td>
+        <td style="text-align: center; padding: 4px 12px;">28 (t = 1.2)</td>
+        <td style="text-align: center; padding: 4px 12px;"><b>102</b> (t = 2.9)</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
   </article>
 
 </section>
