@@ -85,22 +85,12 @@
       which deters short selling and sustains anomaly-related overpricing.
     </p>
 
-<p><strong>Key result.</strong> Anomaly returns are concentrated in stocks whose lendable inventory is held by a few lenders (high IC).</p>
-
-<div style="max-width: 640px; margin: 1em auto; font-size: 0.95em;">
-  <p style="text-align: center; margin: 0.3em 0;">
-    NetLeg<sub><i>i</i></sub> = &Sigma;<sub><i>a</i></sub> <b>1</b>{<i>i</i> &isin; long<sub><i>a</i></sub>} &minus; &Sigma;<sub><i>a</i></sub> <b>1</b>{<i>i</i> &isin; short<sub><i>a</i></sub>} = NetLong<sub><i>i</i></sub> &minus; NetShort<sub><i>i</i></sub>
-  </p>
-  <div style="display: flex; justify-content: space-between; padding: 4px 10px; margin-top: 0.6em; border: 1px solid #999; background: linear-gradient(to right, #cccccc, #eeeeee); font-weight: bold; font-size: 0.9em;">
-    <span>Q1: most overpriced</span><span>Q5: most underpriced</span>
-  </div>
-  <p style="text-align: center; font-size: 0.85em; margin: 0.3em 0;">&larr; NetLeg quintile, formed within each IC group &rarr;</p>
-</div>
+<p><strong>Key result.</strong> Anomaly returns are concentrated in stocks whose lendable inventory is held by a few lenders (high IC). For each stock, NetLeg is the number of anomalies that place it in the long leg minus the number that place it in the short leg. Within each IC group, I sort stocks into NetLeg quintiles and go long Q5 (most underpriced) and short Q1 (most overpriced).</p>
 
 <figure style="margin: 1em 0; text-align: center;">
   <img src="/images/netleg_InventoryConcentration_mean_LS_log_raw.png" alt="Cumulative log returns of the Q5 minus Q1 NetLeg portfolio in high- and low-IC stocks" style="width: 100%; max-width: 900px; height: auto;">
   <figcaption style="font-size: 0.9em; color: #555; margin-top: 0.4em;">
-    Cumulative log returns of the Q5 &minus; Q1 NetLeg portfolio (long Q5, short Q1) in the top and bottom IC quintiles, before and net of fees. US stocks, 2006 to 2023.
+    Cumulative log returns of the Q5 &minus; Q1 NetLeg portfolio in the top and bottom IC quintiles, before and net of fees. US stocks, 2006 to 2023.
   </figcaption>
 </figure>
 
