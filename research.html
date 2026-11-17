@@ -85,10 +85,10 @@
       Russell 3000 inclusion, which broadens the lender base, lowers recall risk and raises short interest most in overpriced stocks with high pre-inclusion IC.
     </p>
 
-<p><strong>Key result.</strong> Anomaly returns are concentrated in stocks whose lendable inventory is held by a few lenders (high IC). For each stock, NetLeg is the number of anomalies that place it in the long leg minus the number that place it in the short leg. Within each IC group, I sort stocks into NetLeg quintiles and go long Q5 (most underpriced) and short Q1 (most overpriced).</p>
-
 <details class="result-toggle">
-  <summary>Show figure and table</summary>
+  <summary>Key result</summary>
+
+  <p>Anomaly returns are concentrated in stocks whose lendable inventory is held by a few lenders (high IC). For each stock, NetLeg is the number of anomalies that place it in the long leg minus the number that place it in the short leg. Within each IC group, I sort stocks into NetLeg quintiles and go long Q5 (most underpriced) and short Q1 (most overpriced).</p>
 
   <figure style="margin: 1em 0; text-align: center;">
     <img src="/images/netleg_InventoryConcentration_mean_LS_log_raw.png" alt="Cumulative log returns of the Q5 minus Q1 NetLeg portfolio in high- and low-IC stocks" style="width: 100%; max-width: 900px; height: auto;">
@@ -97,36 +97,36 @@
     </figcaption>
   </figure>
 
+  <table style="margin: 0.5em auto; border-collapse: collapse; font-size: 0.95em; text-align: center;">
+    <caption style="caption-side: top; font-weight: bold; padding-bottom: 0.4em;">
+      Q5 &minus; Q1 NetLeg return (bp a month, <i>t</i>-statistics in parentheses)
+    </caption>
+    <thead>
+      <tr style="border-top: 1.5px solid #333; border-bottom: 1px solid #333;">
+        <th style="padding: 4px 14px; text-align: left;"></th>
+        <th style="padding: 4px 14px;">Bottom IC quintile</th>
+        <th style="padding: 4px 14px;">Top IC quintile</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="padding: 4px 14px; text-align: left;">Before fees</td>
+        <td style="padding: 4px 14px;">31 (0.8)</td>
+        <td style="padding: 4px 14px;">122 (2.7)</td>
+      </tr>
+      <tr>
+        <td style="padding: 4px 14px; text-align: left;">Net of fees</td>
+        <td style="padding: 4px 14px;">27 (0.7)</td>
+        <td style="padding: 4px 14px;">100 (2.2)</td>
+      </tr>
+      <tr style="border-bottom: 1.5px solid #333;">
+        <td style="padding: 4px 14px; text-align: left;">DGTW-adjusted, net of fees</td>
+        <td style="padding: 4px 14px;">28 (1.2)</td>
+        <td style="padding: 4px 14px;">102 (2.9)</td>
+      </tr>
+    </tbody>
+  </table>
 
-<table style="margin: 0.5em auto; border-collapse: collapse; font-size: 0.95em; text-align: center;">
-  <caption style="caption-side: top; font-weight: bold; padding-bottom: 0.4em;">
-    Q5 &minus; Q1 NetLeg return (bp a month, <i>t</i>-statistics in parentheses)
-  </caption>
-  <thead>
-    <tr style="border-top: 1.5px solid #333; border-bottom: 1px solid #333;">
-      <th style="padding: 4px 14px; text-align: left;"></th>
-      <th style="padding: 4px 14px;">Bottom IC quintile</th>
-      <th style="padding: 4px 14px;">Top IC quintile</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="padding: 4px 14px; text-align: left;">Before fees</td>
-      <td style="padding: 4px 14px;">31 (0.8)</td>
-      <td style="padding: 4px 14px;">122 (2.7)</td>
-    </tr>
-    <tr>
-      <td style="padding: 4px 14px; text-align: left;">Net of fees</td>
-      <td style="padding: 4px 14px;">27 (0.7)</td>
-      <td style="padding: 4px 14px;">100 (2.2)</td>
-    </tr>
-    <tr style="border-bottom: 1.5px solid #333;">
-      <td style="padding: 4px 14px; text-align: left;">DGTW-adjusted, net of fees</td>
-      <td style="padding: 4px 14px;">28 (1.2)</td>
-      <td style="padding: 4px 14px;">102 (2.9)</td>
-    </tr>
-  </tbody>
-</table>
 </details>
 </div>
   </article>
