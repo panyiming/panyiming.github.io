@@ -360,6 +360,32 @@ a {
     line-height: 1.55;
 }
 
+/* =========================================================
+   Results summary 
+  ========================================================= */
+.result-toggle summary {
+    display: inline-block;
+    cursor: pointer;
+    padding: 4px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.9em;
+    color: #333;
+    list-style: none;
+}
+
+.result-toggle summary::-webkit-details-marker {
+    display: none;
+}
+
+.result-toggle summary:hover {
+    background: #f4f4f4;
+}
+
+.result-toggle[open] summary {
+    margin-bottom: 0.8em;
+}
+
 .institution {
     font-family: var(--site-font);
 
